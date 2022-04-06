@@ -1,0 +1,2560 @@
+$sizeXXS: 10px;
+$sizeXS:15px;
+$sizeS:20px;
+$sizeXM:25px;
+$sizeM:30px;
+$sizeL:50px;
+$sizeXL:70px;
+$sizeXXL:150px;
+$azul: rgba(4,40,242, 1);
+$azulado: rgba(46,111,242, 1);
+$celeste: #01A6FF;
+$naranja: rgba(242,124,21, 1);
+$blanquito: rgba(242,242,242, 1);
+$rosa: #F25252;
+$anaranjado: rgba(231, 58, 27, 0.932);
+$amarillo: #F6D54B;
+$naranjita: #F28A2B;
+$naranja1: #F29F05;
+$nose:#45475E;
+$lila:#B296D9;
+$gris: #E5E5E5;
+$fontfamily:'Raleway', sans-serif;
+$fontfamily1: 'Syncopate', sans-serif;
+@mixin tablet {
+    @media(max-width: 1000px){@content;} 
+}
+@mixin media{
+    @media (max-width: 700px){@content;}
+}
+@mixin movil {
+    @media(max-width: 450px){@content;} 
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper{
+    max-width: 1140px;
+    margin: auto;
+    width: 100%;  
+    @include tablet{
+        width: 90%;
+    }
+    @include media{
+        width: 80%;
+    }
+    
+    @include movil{
+        width: 80%;
+    }
+}
+
+
+.cabecera{
+    background-color: black;
+    height: 70vh;
+    background-image: url(../img/pexels-photo-2479635.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    padding-right: $sizeL;
+    font-family: $fontfamily1;
+    @include tablet{
+        padding-right: 0;
+    }
+    .primera{
+     header{
+        .menu{
+        padding-top: $sizeXL;
+        padding-bottom: $sizeXL;
+        height: 10vh;
+        font-family: $fontfamily;
+        margin-bottom: 0;
+        @include movil{
+            display: none;
+        }
+        .logo{
+            width: 20%;
+        }
+        .forma{
+            width: $sizeS;
+            height: $sizeS;
+            transition: 0.5s;
+            background-color: rgba(231, 58, 27, 0.932);
+            border-radius: 5px;
+            li{
+                list-style: none;
+                font-size: $sizeS; 
+                cursor: pointer; 
+                color: white;
+                }      
+                a{
+                    text-decoration: none;
+                    color: white;
+                }    
+            }
+            .submenu{
+                background-color: rgba(231, 58, 27, 0.932);
+                position: absolute;
+                margin-right: 10px;
+                padding: 10px 10px;
+                display: none;
+                border: $celeste;
+                border-radius: 8px;
+                li{
+                    display: block;
+                    position: relative;
+                    width: 100%;
+                    font-size: 10px;
+                    border-bottom: 1px solid white;
+                    padding: 10px $sizeS;
+                    font-family: $fontfamily;
+                    color: white;
+                }
+            }
+            .submenu.destinos{
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        
+        .forma.mapa{
+            background-color: $blanquito;
+            i{
+                color: rgba(231, 58, 27, 0.932);
+            }
+            @include tablet{
+                display: none;
+            }
+        }
+        .forma.activo .forma.mapa{
+            width: $sizeS;
+        }
+        .forma.activo{
+            width: $sizeXL;
+        }
+       
+    
+        .forma.activo .submenu{
+            display: block;
+            z-index: 999;
+        }
+        .forma.activo .submenu li:hover {
+            color: black;
+        }
+        .forma.activo .submenu a:hover{
+            color: black;
+        }
+    }
+    .menu.activo{
+        background-color: $gris;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999999999999999999999999999999999999999;
+        flex-direction: column;
+        img{
+            display: none;
+        }
+        li{
+            font-size: 30px;
+            color: black;
+        }
+        a{
+            font-size: 30px;
+            color: black;
+        }
+    }
+    .hamburger{
+        display: none;
+        @include movil{
+            display: flex;
+            padding-top: 30px;
+            z-index: 9999999999999999;
+        }
+    }
+
+        
+    }  
+    }
+    .formulario{
+        width: 100%;     
+        cursor: pointer;   
+        .formu{
+            width: 70%;
+            margin: 30px auto;
+            padding: 5px 0;
+            background-color: white;
+            border-radius: 20px 40px 40px 20px;
+            @include tablet{
+                width: 77%;
+            }
+            @include movil{
+                flex-direction: column;
+                width: 50%;
+                position: relative;
+                bottom: 70px;
+                right: -60px;
+                border-radius: 10px
+            }
+            input{
+                display: block;
+                border: none;
+                padding: 5px;
+                height: 50px;
+                background-color: white;
+                outline: none;
+                border-radius: 20px 40px 40px 20px;
+                &:hover{
+                    background-color: rgba(128, 128, 128, 0.103);
+                    border-radius: 20px;  
+            }
+            }
+            ::placeholder{
+                font-family: $fontfamily;
+                font-size: 15px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+            .bajo{
+                padding-top: 5px;
+            } 
+            .boton{
+                 background-color: $anaranjado;
+                 border-radius: 40px;
+                 color: white;
+                 padding: 0 10px;
+                 margin-left: 5px;
+                 i{
+                     margin-left: 4px;
+                }
+                &:hover{
+                    border: 1px solid $anaranjado;
+                    color: $anaranjado;
+                    background-color: white;
+                }
+                @include movil{
+                    padding: 3px 10px;
+                     margin: auto;
+                }
+                
+
+            }
+        }
+    }
+
+  
+}
+
+.principal{
+    gap: $sizeM;
+    @include movil{
+        flex-direction: column;
+    }
+    .tercio{
+        position: relative;
+        bottom: 40px;
+        overflow: hidden;
+        object-fit: cover;
+        object-position: center;
+        width: 100%;
+        cursor: pointer;
+        @include movil{
+            bottom: 20px;
+        }
+         .tarjeta{
+            z-index: 9999;
+            border-radius: 20px;
+            transition: 0.5s;
+            position: relative;
+        &:last-child{
+        margin-bottom: 0;
+        }
+        img{
+        width: 100%;
+        border-radius: 20px;
+        }
+        
+
+    } 
+    .infotxt{
+        position: absolute;
+        z-index: 100000;
+        border-radius: 19px;
+        width: 100%;
+        height: 99%;
+        overflow: hidden;
+        opacity: 1;
+        transition: 0.5s;
+        margin: 5px auto;
+        
+        p{
+            color: $anaranjado;
+            font-size: $sizeM;
+            font-family: $fontfamily;
+            margin-bottom: 5px; 
+            text-align: center; 
+            text-transform: uppercase; 
+            @include movil{
+                font-size: $sizeS;
+            } 
+        }
+        h6{
+            text-align: center;
+            font-size: 25px;
+            margin-bottom: 5px;
+            @include movil{
+                font-size: $sizeXS;
+            }
+        }
+        span{
+            border: 1px solid $anaranjado;
+            background-color: white;
+            color: $anaranjado;
+            padding: 10px $sizeM;
+            display: inline-block;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: $fontfamily;
+            margin: 10px auto;
+            @include movil{
+                padding: 10px $sizeXS;
+
+            }
+            &:hover{
+                background-color: $anaranjado;
+                color: white;
+            }
+        }
+        a{
+            border: 1px solid $anaranjado;
+            background-color: white;
+            color: $anaranjado;
+            padding: 10px $sizeM;
+            display: inline-block;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: $fontfamily;
+            margin: 10px auto;
+            text-decoration: none;
+            @include movil{
+                padding: 10px $sizeXS;
+
+            }
+            &:hover{
+                background-color: $anaranjado;
+                color: white;
+            }
+        }
+        
+        
+    } 
+    }
+    .txt{
+        margin-top: $sizeXXL;
+        padding-bottom: $sizeXXL;
+        gap: 150px;
+        @include movil{
+            flex-direction: column;
+
+        }
+        h2{
+            font-size: $sizeL;
+            font-family: $fontfamily;
+            transition: 0.5s;  
+            font-weight: 400; 
+           
+        }
+        &:hover {
+            h2{
+             color: rgba(231, 58, 27, 0.932);    
+            }
+            .tit h2{
+                color: black;
+            } 
+        } 
+           
+        p{
+            text-align: justify;
+            font-size: $sizeM;
+            font-weight: 300;
+            font-family: $fontfamily;
+            border-left: 2px solid rgba(231, 58, 27, 0.932);
+            padding-left: 30px;
+        }
+        h3{
+            font-size: $sizeL;
+            font-family: $fontfamily;
+            transition: 0.5s;
+            text-align: right;
+        }
+    }    
+}
+
+.hoteles{
+    margin-top: $sizeXXL;
+    margin-bottom: $sizeXXL;
+    .rojo{
+        @include movil{
+            flex-direction: column;
+
+        }
+    }
+    .media{
+        flex: 1;
+        gap: 20px;
+        @include movil{
+            gap: 22px;
+
+        }
+        .hotel{
+            background-image: url(../img/web_0000s_0010_pexels-pixabay-271643.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            flex-basis: 45%;
+            border-radius: 10px;
+            @include movil{
+                flex-basis: 47%;
+                margin-bottom: $sizeS;
+
+            }
+                    .box{
+                        font-family: $fontfamily;
+                        margin-top: 15px;
+                        margin-left: 15px;
+                        height: 75%;
+                        color: white;
+                    
+                        h4{
+                            font-size: 20px;
+                            font-weight: bold;
+
+                        }
+                        p{
+                            font-size: 15px;
+                            
+                        }
+                    }
+                    .precio{
+                            background-color: $azulado;
+                            color: white;
+                            width: 55px;
+                            height: 45px;
+                            margin-bottom: 10px;
+    
+                            p{
+                                font-family: $fontfamily;
+                                color: white;
+                            }
+                            h6{
+                                font-family: $fontfamily;
+                                font-size: $sizeXS;
+                                color: white;
+                            }
+                        }
+                    .flecha{
+                            background-color: white;
+                            width: 35px;
+                            height: 45px;
+                            margin-right: 10px;
+                            i{
+                                color: $azulado;
+                            }
+                        }
+                        
+                
+        }
+        .hoteluno{
+            background-image: url(../img/web_0000s_0020_pexels-jonathan-borba-3144580.jpg);
+            height: 50vh;
+            background-size: cover;
+            background-position: center;
+            flex-basis: 45%;
+            border-radius: 10px;
+            .box{
+                font-family: $fontfamily;
+                margin-top: 15px;
+                margin-left: 15px;
+                height: 75%;
+                color: white;
+            
+                h4{
+                    font-size: 20px;
+                    font-weight: bold;
+
+                }
+                p{
+                    font-size: 15px;
+                    
+                }
+            }
+            .precio{
+                    background-color: $azulado;
+                    color: white;
+                    width: 55px;
+                    height: 45px;
+                    margin-bottom: 10px;
+
+                    p{
+                        font-family: $fontfamily;
+                        color: white;
+                    }
+                    h6{
+                        font-family: $fontfamily;
+                        font-size: $sizeXS;
+                        color: white;
+                    }
+                }
+            .flecha{
+                    background-color: white;
+                    width: 35px;
+                    height: 45px;
+                    margin-right: 10px;
+                    i{
+                        color: $azulado;
+                    }
+                }
+        }
+        .hoteldos{
+            background-image: url(../img/web_0000s_0031_2pexels-asad-photo-maldives-1268855.jpg);
+            height: 50vh;
+            background-size: cover;
+            background-position: bottom;
+            border-radius: 10px;
+            .box{
+                font-family: $fontfamily;
+                padding-top: 15px;
+                padding-left: 15px;
+                height: 80%;
+                color: white;
+            
+                h4{
+                    font-size: 20px;
+                    font-weight: bold;
+
+                }
+                p{
+                    font-size: 15px;
+                    
+                }
+            }
+            .precio{
+                    background-color: $azulado;
+                    color: white;
+                    width: 55px;
+                    height: 45px;
+                    margin-bottom: 10px;
+
+                    p{
+                        font-family: $fontfamily;
+                        color: white;
+                    }
+                    h6{
+                        font-family: $fontfamily;
+                        font-size: $sizeXS;
+                        color: white;
+                    }
+                }
+            .flecha{
+                    background-color: white;
+                    width: 35px;
+                    height: 45px;
+                    margin-right: 10px;
+                    i{
+                        color: $azulado;
+                    }
+                }
+
+
+        }
+    }
+    
+}
+
+.destino{
+    padding-top: $sizeXXL;
+    background-color: $gris; 
+    cursor: pointer; 
+    padding-bottom: $sizeXXL;
+    .texto{
+        background-image: url(../img/web_0000s_0027_beautiful-wooden-pathway-going-the-breathtaking-colorful-trees-in-forest.jpg);
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color:  #FFFFFF;
+        animation: mueve 3s ease infinite;
+        margin-top: $sizeXXL;
+       
+        @keyframes mueve {
+            from{
+              background-position: center 25%;
+            }
+            to {
+              background-position: center 50%;
+            }
+          }
+        h2{
+            font-size: $sizeXL;
+            font-family: $fontfamily;
+            transition: 0.5s;  
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            @include movil{
+                font-size: 30px;  
+
+            }
+        }
+        &:hover h2{
+           color: rgba(231, 58, 27, 0.932);
+               
+        }
+        p{
+            text-align: center;
+            font-size: $sizeS;
+            font-weight: 300;
+            font-family: $fontfamily;
+            @include movil{
+                font-size: 12px;  
+
+            }
+        }
+        
+    } 
+    .parrafo{
+       p{
+        text-align: center;
+        font-size: $sizeS;
+        font-weight: 300;
+        font-family: $fontfamily; 
+        margin-bottom: $sizeL;
+       } 
+    }
+    .mitad{ 
+        margin-top: $sizeXXL;  
+        box-shadow: 0px 0px 6px #a19e9e;  
+        @include tablet{
+            flex-direction: column;
+        }
+     .cuartos{
+        width: 100%;
+        height: 100%;
+        .seca{
+            transition: 1s;
+            z-index: 999;
+            img{
+                width: 100%;
+                height: 100%;
+                border-radius: 3px; 
+                display: block;  
+            }
+            .zoom{
+                position: relative;
+                bottom: 250px;
+                left: 250px;
+                background-color: #ffffff78;
+                width: 70px;
+                height: 70px;
+                border-radius: 100%;
+                margin-left: 10px;
+                margin-top: 10px;
+                display: flex;
+                @include tablet{
+                    position: relative;
+                    bottom: 250px;
+                    left:400px;
+                }
+                @include movil{
+                    position: relative;
+                    bottom: 180px;
+                    left:100px; 
+                    
+                }
+                              
+                p{
+                    font-size: $sizeM;
+                }
+            }
+            
+        }
+        
+        
+    }
+    .detalles{
+            width: 100%;
+            height: 100%;
+            background-color: white;  
+            border-radius: 2px;          
+            .rectangulo{
+                width: 250px;
+                height: 70px;
+                color: $anaranjado;
+                text-transform: uppercase;
+                border-radius: 15px;
+                margin: 5px auto;
+                padding: 5px 0;
+                text-align: center;
+                
+                p{
+                    font-size: $sizeL;
+                    font-family: $fontfamily;
+                    color: $anaranjado;
+                    font-weight: bold;
+                    
+                }
+            }
+            .rectangulodos{
+                p{
+                    font-size: $sizeXM;
+                    text-align: left;
+                    font-family: $fontfamily;
+                    margin-top: 15px;
+                    
+                    
+                }
+                .icono{
+                    i{
+                        margin-right: $sizeXS;
+                        color: black;
+                        font-size: 25px;
+                        margin-bottom: $sizeS;
+                        margin-top: 7px;                      
+                    }
+                }
+            }
+            .btn{
+                border: 3px solid rgba(231, 58, 27, 0.932);
+                color: white;
+                background-color: rgba(231, 58, 27, 0.932);
+                padding: 20px 50px;
+                display: inline-block;
+                text-decoration: none;
+                border-radius: 10px;
+                text-transform: uppercase;
+                font-family: "Raleway", sans-serif;
+                font-weight: bold;
+                margin-bottom: 10px;
+                &:hover{
+                    background-color: white;
+                    color: $anaranjado;
+                    border: 1px solid $anaranjado;
+                }
+            }
+            }
+            
+        }
+        .caja{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: #000000ba;
+            z-index: 9999999;
+            top: 0;
+            left: 0;
+            display: none;
+            @include movil{
+                width: 100%;  
+            }
+            
+            .efecto{
+                width: 900px;
+                height: 500px;
+                z-index: 999999;
+                background-image: url(../img/web_0000s_0006_pexels-tyler-lastovich-733993.jpg);
+                background-size: cover;
+                @include movil{
+                    width: 300px;
+                    height: 350px;   
+                }
+            .cierre{
+                width: 50px;
+                height: 50px;
+                background: white;
+                color: white;
+                position: absolute;
+                border-radius: 100%;
+                top: 20px;
+                right: 20px;
+                p{
+                    font-size: $sizeM;
+                    color: black;
+                }
+            }  
+            }
+        }
+        .caja.activo{
+            z-index: 999999;
+           display: flex;
+        }
+}  
+    
+.destino{
+        padding-top: $sizeXXL;
+        background-color: $gris; 
+        cursor: pointer; 
+        padding-bottom: $sizeXXL;
+        .mitad{ 
+            margin-top: $sizeXXL;  
+            box-shadow: 0px 0px 6px #a19e9e;  
+            @include tablet{
+                flex-direction: column;
+            }
+         .cuartosuno{
+            width: 100%;
+            height: 100%;
+            .seca{
+                transition: 1s;
+                z-index: 999;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 3px; 
+                    display: block;  
+                }
+                .zoomuno{
+                    position: relative;
+                    bottom: 250px;
+                    left: 250px;
+                    background-color: #ffffff78;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 100%;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                    display: flex;
+                    @include tablet{
+                        position: relative;
+                        bottom: 250px;
+                        left: 400px; 
+                    }
+                    @include movil{
+                        position: relative;
+                        bottom: 180px;
+                        left:100px; 
+                        
+                    }          
+                    p{
+                        font-size: $sizeM;
+                    }
+                }
+                
+            }
+            
+            
+        }
+        .detalles{
+                width: 100%;
+                height: 100%;
+                background-color: white;  
+                border-radius: 2px;          
+                .rectangulo{
+                    width: 250px;
+                    height: 70px;
+                    color: $anaranjado;
+                    text-transform: uppercase;
+                    border-radius: 15px;
+                    margin: 5px auto;
+                    padding: 5px 0;
+                    text-align: center;
+                    
+                    p{
+                        font-size: $sizeL;
+                        font-family: $fontfamily;
+                        color: $anaranjado;
+                        font-weight: bold;
+                        
+                    }
+                }
+                .rectangulodos{
+                    p{
+                        font-size: $sizeXM;
+                        text-align: left;
+                        font-family: $fontfamily;
+                        margin-top: 15px;
+                        
+                        
+                    }
+                    .icono{
+                        i{
+                            margin-right: $sizeXS;
+                            color: black;
+                            font-size: 25px;
+                            margin-bottom: $sizeS;
+                            margin-top: 7px;                      
+                        }
+                    }
+                }
+                .btn{
+                    border: 3px solid rgba(231, 58, 27, 0.932);
+                    color: white;
+                    background-color: rgba(231, 58, 27, 0.932);
+                    padding: 20px 50px;
+                    display: inline-block;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    text-transform: uppercase;
+                    font-family: "Raleway", sans-serif;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    &:hover{
+                        background-color: white;
+                        color: $anaranjado;
+                        border: 1px solid $anaranjado;
+                    }
+                }
+                }
+                
+            }
+            .cajauno{
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background-color: #000000ba;
+                z-index: 9999999;
+                top: 0;
+                left: 0;
+                display: none;
+                @include movil{
+                    width: 100%;  
+                }
+                .efectouno{
+                    width: 900px;
+                    height: 500px;
+                    z-index: 999999;
+                    background-image: url(../img/web_0000s_0016_pexels-daniel-frese-1547735.jpg);
+                    background-size: cover;
+                    @include movil{
+                        width: 300px;
+                        height: 350px;
+                    }
+                .cierre{
+                    width: 50px;
+                    height: 50px;
+                    background: white;
+                    color: white;
+                    position: absolute;
+                    border-radius: 100%;
+                    top: 20px;
+                    right: 20px;
+                    p{
+                        font-size: $sizeM;
+                        color: black;
+                    }
+                }  
+                }
+            }
+            .cajauno.activo{
+                z-index: 999999;
+               display: flex;
+            }
+}  
+.destino{
+        padding-top: $sizeXXL;
+        background-color: $gris; 
+        cursor: pointer; 
+        padding-bottom: $sizeXXL;
+        .mitad{ 
+            margin-top: $sizeXXL;  
+            box-shadow: 0px 0px 6px #a19e9e;  
+            @include tablet{
+                flex-direction: column;
+            }
+         .cuartosdos{
+            width: 100%;
+            height: 100%;
+            .seca{
+                transition: 1s;
+                z-index: 999;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 3px; 
+                    display: block;  
+                }
+                .zoomdos{
+                    position: relative;
+                    bottom: 250px;
+                    left: 250px;
+                    background-color: #ffffff78;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 100%;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                    display: flex;
+                    @include tablet{
+                        position: relative;
+                        bottom: 250px;
+                        left: 400px;
+                    } 
+                    @include movil{
+                        position: relative;
+                        bottom: 180px;
+                        left:100px; 
+                        
+                    }        
+                    p{
+                        font-size: $sizeM;
+                    }
+                }
+                
+            }
+            
+            
+        }
+        .detalles{
+                width: 100%;
+                height: 100%;
+                background-color: white;  
+                border-radius: 2px;          
+                .rectangulo{
+                    width: 250px;
+                    height: 70px;
+                    color: $anaranjado;
+                    text-transform: uppercase;
+                    border-radius: 15px;
+                    margin: 5px auto;
+                    padding: 5px 0;
+                    text-align: center;
+                    
+                    p{
+                        font-size: $sizeL;
+                        font-family: $fontfamily;
+                        color: $anaranjado;
+                        font-weight: bold;
+                        
+                    }
+                }
+                .rectangulodos{
+                    p{
+                        font-size: $sizeXM;
+                        text-align: left;
+                        font-family: $fontfamily;
+                        margin-top: 15px;
+                        
+                        
+                    }
+                    .icono{
+                        i{
+                            margin-right: $sizeXS;
+                            color: black;
+                            font-size: 25px;
+                            margin-bottom: $sizeS;
+                            margin-top: 7px;                      
+                        }
+                    }
+                }
+                .btn{
+                    border: 3px solid rgba(231, 58, 27, 0.932);
+                    color: white;
+                    background-color: rgba(231, 58, 27, 0.932);
+                    padding: 20px 50px;
+                    display: inline-block;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    text-transform: uppercase;
+                    font-family: "Raleway", sans-serif;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    &:hover{
+                        background-color: white;
+                        color: $anaranjado;
+                        border: 1px solid $anaranjado;
+                    }
+                }
+                }
+                
+            }
+            .cajados{
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background-color: #000000ba;
+                z-index: 9999999;
+                top: 0;
+                left: 0;
+                display: none;
+                @include movil{
+                    width: 100%;  
+                }
+                .efectodos{
+                    width: 900px;
+                    height: 500px;
+                    z-index: 999999;
+                    background-image: url(../img/web_0000s_0008_pexels-pixabay-532263.jpg);
+                    background-size: cover;
+                        @include movil{
+                            width: 300px;
+                            height: 350px;
+                        } 
+                        
+                    
+                .cierre{
+                    width: 50px;
+                    height: 50px;
+                    background: white;
+                    color: white;
+                    position: absolute;
+                    border-radius: 100%;
+                    top: 20px;
+                    right: 20px;
+                    p{
+                        font-size: $sizeM;
+                        color: black;
+                    }
+                }  
+                }
+            }
+            .cajados.activo{
+                z-index: 999999;
+               display: flex;
+            }
+}  
+.destino{
+        padding-top: $sizeXXL;
+        background-color: $gris; 
+        cursor: pointer; 
+        padding-bottom: $sizeXXL;
+        .mitad{ 
+            margin-top: $sizeXXL;  
+            box-shadow: 0px 0px 6px #a19e9e;  
+            @include tablet{
+                flex-direction: column;
+            }
+         .cuartostres{
+            width: 100%;
+            height: 100%;
+            .seca{
+                transition: 1s;
+                z-index: 999;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 3px; 
+                    display: block;  
+                }
+                .zoomtres{
+                    position: relative;
+                    bottom: 250px;
+                    left: 250px;
+                    background-color: #ffffff78;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 100%;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                    display: flex;
+                    @include tablet{
+                        position: relative;
+                        bottom: 250px;
+                        left: 400px;
+                    }   
+                    @include movil{
+                        position: relative;
+                        bottom: 180px;
+                        left:100px; 
+                        
+                    }        
+                    p{
+                        font-size: $sizeM;
+                    }
+                }
+                
+            }
+            
+            
+        }
+        .detalles{
+                width: 100%;
+                height: 100%;
+                background-color: white;  
+                border-radius: 2px;          
+                .rectangulo{
+                    width: 250px;
+                    height: 70px;
+                    color: $anaranjado;
+                    text-transform: uppercase;
+                    border-radius: 15px;
+                    margin: 5px auto;
+                    padding: 5px 0;
+                    text-align: center;
+                    
+                    p{
+                        font-size: $sizeS;
+                        font-family: $fontfamily;
+                        color: $anaranjado;
+                        font-weight: bold;
+                    
+                    }
+                    .arraial{
+                        font-size: 28px;
+                        display: inline-block;
+                    }
+                }
+                .rectangulodos{
+                    p{
+                        font-size: $sizeXM;
+                        text-align: left;
+                        font-family: $fontfamily;
+                        margin-top: 15px;
+                        @include movil{
+                            font-size: 20px;
+                        }
+                    }
+                    .icono{
+                        i{
+                            margin-right: $sizeXS;
+                            color: black;
+                            font-size: 25px;
+                            margin-bottom: $sizeS;
+                            margin-top: 7px;                      
+                        }
+                    }
+                }
+                .btn{
+                    border: 3px solid rgba(231, 58, 27, 0.932);
+                    color: white;
+                    background-color: rgba(231, 58, 27, 0.932);
+                    padding: 20px 50px;
+                    display: inline-block;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    text-transform: uppercase;
+                    font-family: "Raleway", sans-serif;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    &:hover{
+                        background-color: white;
+                        color: $anaranjado;
+                        border: 1px solid $anaranjado;
+                    }
+                }
+                }
+                
+            }
+            .cajatres{
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background-color: #000000ba;
+                z-index: 9999999;
+                top: 0;
+                left: 0;
+                display: none;
+                @include movil{
+                    width: 100%;  
+                }
+                .efectotres{
+                    width: 900px;
+                    height: 500px;
+                    z-index: 999999;
+                    background-image: url(../img/web_0000s_0032_beautiful-ocean-waves-hitting-the-rocky-cliffs-great-for-wallpapers.jpg);
+                    background-size: cover;
+                    @include movil{
+                        width: 300px;
+                        height: 350px;
+                        
+                    }
+                .cierre{
+                    width: 50px;
+                    height: 50px;
+                    background: white;
+                    color: white;
+                    position: absolute;
+                    border-radius: 100%;
+                    top: 20px;
+                    right: 20px;
+                    p{
+                        font-size: $sizeM;
+                        color: black;
+                    }
+                }  
+                }
+            }
+            .cajatres.activo{
+                z-index: 999999;
+               display: flex;
+            }
+}  
+.destino{
+        padding-top: $sizeXXL;
+        background-color: $gris; 
+        cursor: pointer; 
+        padding-bottom: $sizeXXL;
+        .mitad{ 
+            margin-top: $sizeXXL;  
+            box-shadow: 0px 0px 6px #a19e9e;  
+            @include tablet{
+                flex-direction: column;
+            }
+         .cuartoscuatro{
+            width: 100%;
+            height: 100%;
+            .seca{
+                transition: 1s;
+                z-index: 999;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 3px; 
+                    display: block;  
+                }
+                .zoomcuatro{
+                    position: relative;
+                    bottom: 250px;
+                    left: 250px;
+                    background-color: #ffffff78;
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 100%;
+                    margin-left: 10px;
+                    margin-top: 10px;
+                    display: flex;
+                    @include tablet{
+                        position: relative;
+                        bottom: 250px;
+                        left: 400px;
+                    }
+                    @include movil{
+                        position: relative;
+                        bottom: 180px;
+                        left:100px; 
+                        
+                    }
+                                  
+                    p{
+                        font-size: $sizeM;
+                    }
+                }
+                
+            }
+            
+            
+        }
+        .detalles{
+                width: 100%;
+                height: 100%;
+                background-color: white;  
+                border-radius: 2px;  
+                padding: 40px 0;        
+                .rectangulo{
+                    width: 250px;
+                    height: 70px;
+                    color: $anaranjado;
+                    text-transform: uppercase;
+                    border-radius: 15px;
+                    margin: 5px auto;
+                    padding: 5px 0;
+                    text-align: center;
+                    
+                    p{
+                        font-size: $sizeL;
+                        font-family: $fontfamily;
+                        color: $anaranjado;
+                        font-weight: bold;
+                        @include movil{
+                            font-size: 45px;
+                        }
+                        
+                    }
+                }
+                .rectangulodos{
+                    p{
+                        font-size: $sizeXM;
+                        text-align: left;
+                        font-family: $fontfamily;
+                        margin-top: 15px;
+                        @include movil{
+                            font-size: 20px;
+                        }
+                        
+                    }
+                    .icono{
+                        i{
+                            margin-right: $sizeXS;
+                            color: black;
+                            font-size: 25px;
+                            margin-bottom: $sizeS;
+                            margin-top: 7px;                      
+                        }
+                    }
+                }
+                .btn{
+                    border: 3px solid rgba(231, 58, 27, 0.932);
+                    color: white;
+                    background-color: rgba(231, 58, 27, 0.932);
+                    padding: 20px 50px;
+                    display: inline-block;
+                    text-decoration: none;
+                    border-radius: 10px;
+                    text-transform: uppercase;
+                    font-family: "Raleway", sans-serif;
+                    font-weight: bold;
+                    margin-bottom: 10px;
+                    @include movil{
+                        padding: 20px 40px;
+
+                    }
+                    &:hover{
+                        background-color: white;
+                        color: $anaranjado;
+                        border: 1px solid $anaranjado;
+                    }
+                }
+                }
+                
+            }
+            .cajacuatro{
+                position: fixed;
+                width: 100%;
+                height: 100%;
+                background-color: #000000ba;
+                z-index: 9999999;
+                top: 0;
+                left: 0;
+                display: none;
+                @include movil{
+                    width: 100%;  
+                }
+                .efectocuatro{
+                    width: 900px;
+                    height: 500px;
+                    z-index: 999999;
+                    background-image: url(../img/web_0000s_0009_pexels-s-migaj-747964.jpg);
+                    background-size: cover;
+                    @include movil{
+                        width: 300px;
+                        height: 350px;   
+                    }
+                .cierre{
+                    width: 50px;
+                    height: 50px;
+                    background: white;
+                    color: white;
+                    position: absolute;
+                    border-radius: 100%;
+                    top: 20px;
+                    right: 20px;
+                    p{
+                        font-size: $sizeM;
+                        color: black;
+                    }
+                }  
+                }
+            }
+            .cajacuatro.activo{
+                z-index: 999999;
+               display: flex;
+            }
+}  
+.destino.uno{
+    background-color: white;
+    .texto{
+        background-image: url(../img/web_0000s_0027_beautiful-wooden-pathway-going-the-breathtaking-colorful-trees-in-forest.jpg);
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color:  #FFFFFF;
+        animation: filling 3s ease infinite;
+        margin-top: $sizeXXL;
+       
+        @keyframes filling {
+            from{
+              background-position: center 25%;
+            }
+            to {
+              background-position: center 50%;
+            }
+          }
+        h2{
+            font-size: $sizeXL;
+            font-family: $fontfamily;
+            transition: 0.5s;  
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            @include movil{
+                font-size: 25px;
+            }
+        }
+        &:hover h2{
+           color: rgba(231, 58, 27, 0.932);
+               
+        }
+        p{
+            text-align: center;
+            font-size: $sizeS;
+            font-weight: 300;
+            font-family: $fontfamily;
+            @include movil{
+                font-size: 12px;
+            }
+        }
+        
+    } 
+}
+.aventura{
+    padding-top: 200px;
+    padding-bottom: 200px;
+    .txt{
+        padding-bottom: 200px;
+        gap: 150px;
+        @include movil{
+            flex-direction: column;
+        }
+        h2{
+            font-size: $sizeL;
+            font-family: $fontfamily;
+            transition: 0.5s;  
+            font-weight: 300; 
+        }
+        &:hover h2{
+           color: $anaranjado;            
+        }
+        p{
+            text-align: justify;
+            font-size: $sizeM;
+            font-weight: 300;
+            font-family: $fontfamily;
+            border-left: 3px solid $anaranjado;
+            padding-left: 30px;
+        }
+        
+    }
+    .experiencias{
+        padding-bottom: $sizeXXL;
+        .miti{
+            flex: 1;
+            gap: 30px;
+            margin-top: 30px;
+            padding-bottom: $sizeL;
+            cursor: pointer;
+            @include movil{
+                flex-direction: column;
+            }
+            .mitades{
+                flex: 1;
+                overflow: hidden;
+                border-radius: 5px;
+                .foto{
+                    background-image: url(../img/web_0000s_0025_maldives-island.jpg);
+                    background-size: cover;
+                    background-position: top;
+                    height: 300px;
+                    .box{
+                        font-family: $fontfamily;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                    }
+                    .precio{
+                            background-color: $azulado;
+                            color: white;
+                            width: 55px;
+                            height: 45px;
+                            margin-bottom: 10px;
+                            p{
+                                font-family: $fontfamily;
+                            }
+                            h6{
+                                font-family: $fontfamily;
+                                font-size: $sizeXS;
+                            }
+                    }
+                    .flecha{
+                            background-color: white;
+                            width: 35px;
+                            height: 45px;
+                            margin-right: 10px;
+                            @include tablet{
+                                margin-bottom: 10px;
+                            }
+                            i{
+                                color: $azulado;
+                            }
+                        }
+                 &:hover{
+                     filter:grayscale(2);
+                 }
+                        
+                }
+                .fotouno{
+                    background-image: url(../img/web_0000s_0026_couple-together-kayaking-on-the-river.jpg);
+                    background-size: cover;
+                    background-position: top;
+                    height: 300px;
+                    &:hover{
+                        filter:grayscale(2);
+                    }
+                    .box{
+                        font-family: $fontfamily;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                    }
+                    .precio{
+                            background-color: $azulado;
+                            color: white;
+                            width: 55px;
+                            height: 45px;
+                            margin-bottom: 10px;
+                            p{
+                                font-family: $fontfamily;
+                            }
+                            h6{
+                                font-family: $fontfamily;
+                                font-size: $sizeXS;
+                            }
+                    }
+                    .flecha{
+                            background-color: white;
+                            width: 35px;
+                            height: 45px;
+                            margin-right: 10px;
+                            @include tablet{
+                                margin-bottom: 10px;
+                            }
+                            i{
+                                color: $azulado;
+                            }
+                        }
+
+                }
+                .fotodos{
+                    background-image: url(../img/web_0000s_0013_pexels-nina-uhlíková-725255.jpg);
+                    background-size: cover;
+                    background-position: top;
+                    height: 300px;
+                    &:hover{
+                        filter:grayscale(2);
+                    }
+                    .box{
+                        font-family: $fontfamily;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                    }
+                    .precio{
+                            background-color: $azulado;
+                            color: white;
+                            width: 55px;
+                            height: 45px;
+                            margin-bottom: 10px;
+                            p{
+                                font-family: $fontfamily;
+                            }
+                            h6{
+                                font-family: $fontfamily;
+                                font-size: $sizeXS;
+                            }
+                    }
+                    .flecha{
+                            background-color: white;
+                            width: 35px;
+                            height: 45px;
+                            margin-right: 10px;
+                            @include tablet{
+                                margin-bottom: 10px;
+                            }
+                            i{
+                                color: $azulado;
+                            }
+                        }
+
+                }
+                .fototres{
+                    background-image: url(../img/pexels-yunus-tuğ-7877526.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    height: 300px;
+                    &:hover{
+                        filter:grayscale(2);
+                    }
+                    .box{
+                        font-family: $fontfamily;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                    }
+                    .precio{
+                            background-color: $azulado;
+                            color: white;
+                            width: 55px;
+                            height: 45px;
+                            margin-bottom: 10px;
+                            p{
+                                font-family: $fontfamily;
+                            }
+                            h6{
+                                font-family: $fontfamily;
+                                font-size: $sizeXS;
+                            }
+                    }
+                    .flecha{
+                            background-color: white;
+                            width: 35px;
+                            height: 45px;
+                            margin-right: 10px;
+                            @include tablet{
+                                margin-bottom: 10px;
+                            }
+                            i{
+                                color: $azulado;
+                            }
+                        }
+
+                }
+                .fotocuatro{
+                    background-image: url(../img/web_0000s_0017_pexels-brandon-benedict-9714946.jpg);
+                    background-size: cover;
+                    background-position: bottom;
+                    height: 300px;
+                    &:hover{
+                        filter:grayscale(2);
+                    }
+                    .box{
+                        font-family: $fontfamily;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                    }
+                    .precio{
+                            background-color: $azulado;
+                            color: white;
+                            width: 55px;
+                            height: 45px;
+                            margin-bottom: 10px;
+                            p{
+                                font-family: $fontfamily;
+                            }
+                            h6{
+                                font-family: $fontfamily;
+                                font-size: $sizeXS;
+                            }
+                    }
+                    .flecha{
+                            background-color: white;
+                            width: 35px;
+                            height: 45px;
+                            margin-right: 10px;
+                            @include tablet{
+                                margin-bottom: 10px;
+                            }
+                            i{
+                                color: $azulado;
+                            }
+                        }
+
+                }
+                .fotocinco{
+                    background-image: url(../img/web_0000s_0012_pexels-pixabay-371589.jpg);
+                    background-size: cover;
+                    background-position: top;
+                    height: 300px;
+                    &:hover{
+                        filter:grayscale(2);
+                    }
+                    .box{
+                        font-family: $fontfamily;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                    }
+                    .precio{
+                            background-color: $azulado;
+                            color: white;
+                            width: 55px;
+                            height: 45px;
+                            margin-bottom: 10px;
+                            p{
+                                font-family: $fontfamily;
+                            }
+                            h6{
+                                font-family: $fontfamily;
+                                font-size: $sizeXS;
+                            }
+                    }
+                    .flecha{
+                            background-color: white;
+                            width: 35px;
+                            height: 45px;
+                            margin-right: 10px;
+                            @include tablet{
+                                margin-bottom: 10px;
+                            }
+                            i{
+                                color: $azulado;
+                            }
+                        }
+
+                }
+                .fotoseis{
+                    background-image: url(../img/web_0000s_0018_pexels-asad-photo-maldives-3601425.jpg);
+                    background-size: cover;
+                    background-position: top;
+                    height: 300px;
+                    &:hover{
+                        filter:grayscale(2);
+                    }
+                    .box{
+                        font-family: $fontfamily;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                    }
+                    .precio{
+                            background-color: $azulado;
+                            color: white;
+                            width: 55px;
+                            height: 45px;
+                            margin-bottom: 10px;
+                            p{
+                                font-family: $fontfamily;
+                            }
+                            h6{
+                                font-family: $fontfamily;
+                                font-size: $sizeXS;
+                            }
+                    }
+                    .flecha{
+                            background-color: white;
+                            width: 35px;
+                            height: 45px;
+                            margin-right: 10px;
+                            @include tablet{
+                                margin-bottom: 10px;
+                            }
+                            i{
+                                color: $azulado;
+                            }
+                        }
+
+                }
+                .fotosiete{
+                    background-image: url(../img/web_0000s_0015_pexels-pixabay-259967.jpg);
+                    background-size: cover;
+                    background-position: center;
+                    height: 300px;
+                    &:hover{
+                        filter:grayscale(2);
+                    }
+                    .box{
+                        font-family: $fontfamily;
+                        margin-top: 10px;
+                        margin-left: 10px;
+                    }
+                    .precio{
+                            background-color: $azulado;
+                            color: white;
+                            width: 55px;
+                            height: 45px;
+                            margin-bottom: 10px;
+                            p{
+                                font-family: $fontfamily;
+                            }
+                            h6{
+                                font-family: $fontfamily;
+                                font-size: $sizeXS;
+                            }
+                    }
+                    .flecha{
+                            background-color: white;
+                            width: 35px;
+                            height: 45px;
+                            margin-right: 10px;
+                            @include tablet{
+                                margin-bottom: 10px;
+                            }
+                            i{
+                                color: $azulado;
+                            }
+                        }
+
+                }
+                }
+                }
+            }
+
+}
+
+footer{
+    height: 60vh;
+    padding: 30px 0;
+    background-image: url(../img/pexels-photo-2479635.jpeg);
+    background-size: cover;
+    background-position: bottom right;
+    background-attachment: fixed;
+    .contac{
+        background-color: white;
+        height: 12vh;
+        margin: 30px auto;
+        border-radius: 20px 40px 40px 20px;
+        width: 40%;
+        @include tablet{
+            width: 41%;
+        }
+        @include movil{
+            width: 65%;
+            height: 8vh;
+        }
+        p{
+            display: block;
+            text-align: center;
+            font-family: $fontfamily;
+            color: black;
+            padding: 7px ;
+            margin-right: 10px;
+            font-size: $sizeS;
+            @include tablet{
+                font-size: $sizeXS;
+            }
+            @include movil{
+                display: none;
+            }
+        }
+        input{
+            display: block;
+            border: none;
+            padding: 5px;
+            height: 50px;
+            background-color: white;
+            outline: none;
+            border-radius: 20px 40px 40px 20px;
+            @include tablet{
+                padding: 0;
+            }
+            &:hover{
+                background-color: rgba(128, 128, 128, 0.103);
+                border-radius: 20px;  
+            }
+        }
+       
+        ::placeholder{
+            font-family: $fontfamily;
+            font-size: 15px;
+            text-transform: uppercase;
+            text-align: center;
+
+        }
+        a{
+            background-color: $anaranjado;
+                 border-radius: 40px;
+                 color: white;
+                 padding: 10px 10px;
+                 margin-left: 5px;
+                 text-decoration: none;
+                 text-transform: uppercase;
+                 font-family: $fontfamily;
+                 @include tablet{
+                     margin-left: 0;
+                     padding: 10px 5px;
+                 }
+        }
+        
+    }
+    .redes{
+        
+        i{
+            color: white;
+            margin-right: 100px;
+            font-size: 30px;
+            margin-top: 15px;
+            @include tablet{
+                margin-right: 60px;
+            }
+            @include movil{
+                font-size: 15px;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+    }
+    .menufooter{
+        padding-bottom: 30px;
+        @include tablet{
+            padding-bottom: 0;
+        }
+        ul{
+            li{
+                list-style: none;
+                padding-bottom: 5px;
+                padding-top: 10px;
+                padding-right: 40px;
+                margin-right: 10px;
+                font-family: $fontfamily;
+                color: white;
+                font-size: 20px;
+                @include tablet{
+                    padding-right: 10px;
+                }
+                @include movil{
+                    padding-right: 0;
+                    font-size: 10px;
+                }
+                &:hover{
+                    color: $anaranjado;
+                }
+                &:hover i{
+                    transform: scale(1.3);
+                }
+                i{
+                    color: $anaranjado;
+
+                }
+                a{
+                    list-style: none;
+                    padding-bottom: 5px;
+                    padding-top: 10px;
+                    padding-right: 40px;
+                    margin-right: 10px;
+                    font-family: $fontfamily;
+                    color: white;
+                    font-size: 20px; 
+                    text-decoration: none;
+                    @include movil{
+                        font-size: 10px;
+                    }
+                    &:hover{
+                        color: $anaranjado;
+                    }
+                }
+        
+            }
+            .titulof{
+                text-transform: uppercase;
+                border-bottom: 1px solid $anaranjado;
+            }
+        }
+    }
+    .menufooter.uno{
+        li{
+            margin-right: 0;
+        }
+    }
+
+   
+}
+
+/*section destino*/
+
+.cabecera.nueva{
+    background-image: url(../img/pexels-photo-373458.jpeg);
+    background-size: cover;
+    background-position: bottom;
+
+    .menu.nuevo{
+        li{
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    .menu.activo{
+        background-color: $gris;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 9999999999999999999999999999999999999999;
+        flex-direction: column;
+        img{
+            display: none;
+        }
+        li{
+            font-size: 30px;
+            color: black;
+            a{
+                font-size: 30px;
+                color: black;
+            }
+        }
+        
+    }
+    .hamburger{
+        display: none;
+        position: relative;
+        @include movil{
+            display: flex;
+            z-index: 9999999999999999999999999999999999999999;
+        }
+    }
+    .formulario{
+        margin-top: 50px;
+    }
+}
+.principal.dos.tres{
+    margin-top: 100px;
+    .txt{
+        margin-top: 0;
+        padding-bottom: 30px;
+        h2{
+            @include tablet{
+                border-left: none;
+            }
+            @include movil{
+                padding-left: 0;
+            }
+        }
+    }
+}
+.roticor{
+    height: 50vh;
+    gap: 50px;
+    margin-top: $sizeXXL;
+    margin-bottom:300px;
+    @include movil{
+        flex-direction: column;
+        margin-bottom:1300px;
+    }
+    .cajon{
+        flex:1;
+        position: relative;
+        perspective: 1000px;
+        border-radius: 15px;
+        cursor: pointer;
+
+        .careta{
+            background-image: url(../img/pexels-photo-6064283.jpeg);
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            position: absolute;
+            transition: 1s;
+            h4{
+                color: white;
+                text-transform: uppercase;
+                font-size: $sizeS;
+                font-family: $fontfamily;
+                margin-top: 10px;
+                margin-left: 10px;
+                
+            }
+            
+        
+        }
+        .careta.uno{
+            background-image: url(../img/pexels-photo-7148443.jpeg);
+            background-position: left;
+            background-size: cover;
+            h4{
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+        }
+        .careta.dos{
+            background-image: url(../img/pexels-photo-1024989.jpeg);
+            background-position: center;
+            background-size: cover;
+        }
+        .secote{
+            position: relative;
+            backface-visibility: hidden;
+            width: 100%;
+            height: 50vh;
+            background-color: $azulado;
+            transform: rotateY(180deg);
+            transition: 1s;
+            background-image: url(../img/father-daughter-beach-sea-38302.jpeg);
+            background-position: left;
+            background-size: cover;
+            span{
+            border: 1px solid $anaranjado;
+            background-color: white;
+            color: $anaranjado;
+            padding: 10px 10px;
+            display: block;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: $fontfamily;
+           margin-right: auto;
+           margin-left: 10px;
+           margin-bottom: 30px;
+           margin-top: 20px;
+            text-decoration: none;
+            z-index: 999;
+          
+            &:hover {
+            border: 1px solid $anaranjado;
+            background-color: $anaranjado;
+            color: white;
+          
+            }
+        
+        }
+}
+.secote.uno{
+        background-image: url(../img/pexels-photo-1374122.jpeg);
+            background-position: left;
+            background-size: cover;
+            span{
+                margin-right: auto;
+            }
+}
+.secote.dos{
+    background-image: url(../img/pexels-photo-792726.jpeg);
+    background-position: left;
+    background-size: cover;
+    span{
+        margin-right: auto;
+    }
+}        
+        
+        
+    }
+    .cajon:hover .careta{
+        transform: rotateY(-180deg);
+
+    }
+    .cajon:hover .secote{
+        backface-visibility: hidden;
+        transform: rotateY(-10deg);
+    }
+}  
+
+.destino.segunda{
+    .texto{
+        margin-top: 0;
+            background-image: url(../img/web_0000s_0000_wooden-bridge-at-koh-nangyuan-island-in-surat-thani-thailand.jpg);
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            color:  #FFFFFF;
+            animation: mueve 3s ease infinite;
+           
+            @keyframes mueve {
+                from{
+                  background-position: center 50%;
+                }
+                to {
+                  background-position: center 100%;
+                }
+              }
+            h2{
+                font-size: $sizeXL;
+                font-family: $fontfamily;
+                transition: 0.5s;  
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-bottom: 20px;
+                border-radius: 10px;
+                @include tablet{
+                    font-size: 45px;
+                }
+                 @include movil{
+                     font-size: 21px;
+                }
+                
+            }
+            &:hover h2{
+               color: rgba(231, 58, 27, 0.932);
+                   
+            }
+            p{
+                text-align: center;
+                font-size: $sizeS;
+                font-weight: 300;
+                font-family: $fontfamily;
+                @include movil{
+                    font-size: 13px;
+                }
+            }
+            
+    }
+}
+.principal.dos{
+    .txt{
+        h2{
+            text-transform: uppercase;
+            border-left: 2px solid $anaranjado;
+            padding-left: 50px;
+            @include movil{
+                padding-left: 8px;
+                font-size: 33px;
+            }
+        }
+        .tit{
+            color: $anaranjado;
+           
+        }
+       
+    }
+}
+
+.estaciones{
+    .fila{
+        height: 500px;        
+        margin-top: $sizeXXL;
+        position: relative;
+        margin-bottom: 300px;
+    span{
+            position: absolute;
+            top:250px;
+            left: 540px;
+            border: 1px solid $anaranjado;
+            background-color: white;
+            color: $anaranjado;
+            padding: 10px $sizeS;
+            display: inline-block;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-family: $fontfamily;
+            margin: 10px auto;
+            text-decoration: none;
+            z-index: 999;
+            transition: 2s;
+            @include tablet{
+                display: none;
+            }
+          i{
+            margin-top: 5px;
+            font-size: 20px;
+            }
+            &:hover {
+            border: 1px solid $anaranjado;
+            background-color: $anaranjado;
+            color: white;
+          }
+    }
+    .estacion{
+        flex:1;
+        transition: 0.5s;
+        perspective: 1000px;
+        cursor: pointer;
+        &:hover{
+            flex: 2;
+        }
+        h3{
+            font-family: $fontfamily;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: $sizeM;
+            margin-top: $sizeM;
+            margin-left: $sizeM;
+            background-color: $anaranjado;
+            padding: 8px ;
+          }
+        a{
+          border: 1px solid $anaranjado;
+          background-color: $anaranjado;
+          color: white;
+          padding: 15px $sizeS;
+          display: inline-block;
+          text-align: center;
+          border-radius: 10px;
+          cursor: pointer;
+          font-weight: bold;
+          text-transform: uppercase;
+          font-family: $fontfamily;
+          margin: 10px auto;
+          text-decoration: none;
+          margin-left: $sizeM;
+          &:hover{
+            border: 1px solid $anaranjado;
+          background-color: white;
+          color: $anaranjado;
+        }
+    }
+    }
+    &:hover{
+        span{
+            display: none;
+        }
+    }
+    
+    .dia{
+        background-image: url(../img/pexels-photo-1450391.jpeg);
+        background-size: cover;
+        background-position: bottom;
+        transition: 1s;
+        height: 500px;
+        .escondida{
+            height: 500px; 
+           }
+           .una{
+               position: relative;
+                left: -700px;
+                display: none;
+                opacity: 0;
+           }
+           &:hover{
+            .escondida.una{
+                left: 0;
+                display: flex;
+                opacity: 1;
+            }
+        }
+    }
+    .noche{
+        background-image: url(../img/pexels-photo-5232494.jpeg);
+        background-size: cover;
+        background-position: center;
+        height: 500px;
+        .escondida{
+            height: 500px;
+        }
+        .dos{
+            position: relative;
+            right: -700px;
+            display: none;
+        }
+        &:hover{
+            .escondida.dos{
+                right: 0;
+                display: flex;
+            }
+        }
+    }
+    .dia.unos{
+        background-image: url(../img/pexels-photo-1450372.jpeg);
+        background-size: cover;
+        background-position: bottom;
+        height: 500px;
+    }
+    .noche.uno{
+        background-image: url(../img/pexels-photo-3434518.jpeg);
+        background-size: cover;
+        background-position: bottom;
+        height: 500px;
+    }
+    
+} 
+}
+
+.hoteles.tres{
+    .verde{
+            @include movil{
+         flex-direction: column;
+            }  
+    }
+    h4{
+        text-transform: uppercase;
+    }
+    .hotel.diez{
+        background-image: url(../img/pexels-photo-2404370.jpeg);
+        background-size: cover;
+        background-position: bottom;
+    }
+    .hotel.once{
+        background-image: url(../img/pexels-photo-1645028.jpeg);
+        background-size: cover;
+        background-position: bottom;
+    }
+    .hoteldos.doce{
+        background-image: url(../img/pexels-photo-9765729.jpeg);
+        background-size: cover;
+        background-position: center;
+        margin-top: 0;
+        margin-left: 0;
+    }
+}
+.hoteles.dos{
+    margin-top: $sizeXXL;
+    margin-bottom: 250px;
+    .azul{
+        @include movil{
+         flex-direction: column;
+        }
+    }
+    h4{
+        text-transform: uppercase;
+    }
+    .media{
+        @include movil{
+            flex-direction: column;
+        }
+    }
+    .hotel.cuatro{
+        background-image: url(../img/pexels-photo-164595.jpeg);
+        background-size: cover;
+        background-position: bottom;
+        
+    }
+    .hotel.cinco{
+        background-image: url(../img/pexels-photo-189296.jpeg);
+        background-size: cover;
+        background-position: bottom;
+    }
+    .hotel.seis{
+        background-image: url(../img/pexels-photo-279746.jpeg);
+        background-size: cover;
+        background-position: bottom;
+    }
+    .hotel.siete{
+        background-image: url(../img/pexels-photo-338504.jpeg);
+        background-size: cover;
+        background-position: bottom;
+    }
+    .box:hover{
+        color: black;
+
+    }
+
+}
+
+
+ 
+    
+
+        
+
+
+    
+     
+
+
+
+
+/*Flex*/
+.flex{
+    display: flex;
+}
+.jend{
+    justify-content: flex-end;
+}
+.acenter{
+    align-items: center;
+}
+.saround{
+    justify-content: space-around;
+}
+.jcenter{
+    justify-content: center;
+}
+ .fcolumn{
+     flex-direction: column;
+ }
+ .fend{
+     align-items: flex-end;
+ }
+ .sbetween{
+     justify-content: space-between;
+ }
+ .aend{
+     align-items: flex-end;
+ }
+
+
+

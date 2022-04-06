@@ -1,0 +1,2548 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1140px;
+  margin: auto;
+  width: 100%;
+}
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 90%;
+  }
+}
+@media (max-width: 700px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+@media (max-width: 450px) {
+  .wrapper {
+    width: 80%;
+  }
+}
+
+.cabecera {
+  background-color: black;
+  height: 70vh;
+  background-image: url(../img/pexels-photo-2479635.jpeg);
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  padding-right: 50px;
+  font-family: "Syncopate", sans-serif;
+}
+@media (max-width: 1000px) {
+  .cabecera {
+    padding-right: 0;
+  }
+}
+.cabecera .primera header .menu {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  height: 10vh;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 0;
+}
+@media (max-width: 450px) {
+  .cabecera .primera header .menu {
+    display: none;
+  }
+}
+.cabecera .primera header .menu .logo {
+  width: 20%;
+}
+.cabecera .primera header .menu .forma {
+  width: 20px;
+  height: 20px;
+  transition: 0.5s;
+  background-color: rgba(231, 58, 27, 0.932);
+  border-radius: 5px;
+}
+.cabecera .primera header .menu .forma li {
+  list-style: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: white;
+}
+.cabecera .primera header .menu .forma a {
+  text-decoration: none;
+  color: white;
+}
+.cabecera .primera header .menu .submenu {
+  background-color: rgba(231, 58, 27, 0.932);
+  position: absolute;
+  margin-right: 10px;
+  padding: 10px 10px;
+  display: none;
+  border: #01A6FF;
+  border-radius: 8px;
+}
+.cabecera .primera header .menu .submenu li {
+  display: block;
+  position: relative;
+  width: 100%;
+  font-size: 10px;
+  border-bottom: 1px solid white;
+  padding: 10px 20px;
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+.cabecera .primera header .menu .submenu.destinos a {
+  text-decoration: none;
+  color: white;
+}
+.cabecera .primera header .menu .forma.mapa {
+  background-color: #f2f2f2;
+}
+.cabecera .primera header .menu .forma.mapa i {
+  color: rgba(231, 58, 27, 0.932);
+}
+@media (max-width: 1000px) {
+  .cabecera .primera header .menu .forma.mapa {
+    display: none;
+  }
+}
+.cabecera .primera header .menu .forma.activo .forma.mapa {
+  width: 20px;
+}
+.cabecera .primera header .menu .forma.activo {
+  width: 70px;
+}
+.cabecera .primera header .menu .forma.activo .submenu {
+  display: block;
+  z-index: 999;
+}
+.cabecera .primera header .menu .forma.activo .submenu li:hover {
+  color: black;
+}
+.cabecera .primera header .menu .forma.activo .submenu a:hover {
+  color: black;
+}
+.cabecera .primera header .menu.activo {
+  background-color: #E5E5E5;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999999999999998000000000000000000000000;
+  flex-direction: column;
+}
+.cabecera .primera header .menu.activo img {
+  display: none;
+}
+.cabecera .primera header .menu.activo li {
+  font-size: 30px;
+  color: black;
+}
+.cabecera .primera header .menu.activo a {
+  font-size: 30px;
+  color: black;
+}
+.cabecera .primera header .hamburger {
+  display: none;
+}
+@media (max-width: 450px) {
+  .cabecera .primera header .hamburger {
+    display: flex;
+    padding-top: 30px;
+    z-index: 10000000000000000;
+  }
+}
+.cabecera .formulario {
+  width: 100%;
+  cursor: pointer;
+}
+.cabecera .formulario .formu {
+  width: 70%;
+  margin: 30px auto;
+  padding: 5px 0;
+  background-color: white;
+  border-radius: 20px 40px 40px 20px;
+}
+@media (max-width: 1000px) {
+  .cabecera .formulario .formu {
+    width: 77%;
+  }
+}
+@media (max-width: 450px) {
+  .cabecera .formulario .formu {
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+    bottom: 70px;
+    right: -60px;
+    border-radius: 10px;
+  }
+}
+.cabecera .formulario .formu input {
+  display: block;
+  border: none;
+  padding: 5px;
+  height: 50px;
+  background-color: white;
+  outline: none;
+  border-radius: 20px 40px 40px 20px;
+}
+.cabecera .formulario .formu input:hover {
+  background-color: rgba(128, 128, 128, 0.103);
+  border-radius: 20px;
+}
+.cabecera .formulario .formu ::-moz-placeholder {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cabecera .formulario .formu :-ms-input-placeholder {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cabecera .formulario .formu ::placeholder {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.cabecera .formulario .formu .bajo {
+  padding-top: 5px;
+}
+.cabecera .formulario .formu .boton {
+  background-color: rgba(231, 58, 27, 0.932);
+  border-radius: 40px;
+  color: white;
+  padding: 0 10px;
+  margin-left: 5px;
+}
+.cabecera .formulario .formu .boton i {
+  margin-left: 4px;
+}
+.cabecera .formulario .formu .boton:hover {
+  border: 1px solid rgba(231, 58, 27, 0.932);
+  color: rgba(231, 58, 27, 0.932);
+  background-color: white;
+}
+@media (max-width: 450px) {
+  .cabecera .formulario .formu .boton {
+    padding: 3px 10px;
+    margin: auto;
+  }
+}
+
+.principal {
+  gap: 30px;
+}
+@media (max-width: 450px) {
+  .principal {
+    flex-direction: column;
+  }
+}
+.principal .tercio {
+  position: relative;
+  bottom: 40px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  cursor: pointer;
+}
+@media (max-width: 450px) {
+  .principal .tercio {
+    bottom: 20px;
+  }
+}
+.principal .tercio .tarjeta {
+  z-index: 9999;
+  border-radius: 20px;
+  transition: 0.5s;
+  position: relative;
+}
+.principal .tercio .tarjeta:last-child {
+  margin-bottom: 0;
+}
+.principal .tercio .tarjeta img {
+  width: 100%;
+  border-radius: 20px;
+}
+.principal .tercio .infotxt {
+  position: absolute;
+  z-index: 100000;
+  border-radius: 19px;
+  width: 100%;
+  height: 99%;
+  overflow: hidden;
+  opacity: 1;
+  transition: 0.5s;
+  margin: 5px auto;
+}
+.principal .tercio .infotxt p {
+  color: rgba(231, 58, 27, 0.932);
+  font-size: 30px;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+}
+@media (max-width: 450px) {
+  .principal .tercio .infotxt p {
+    font-size: 20px;
+  }
+}
+.principal .tercio .infotxt h6 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 5px;
+}
+@media (max-width: 450px) {
+  .principal .tercio .infotxt h6 {
+    font-size: 15px;
+  }
+}
+.principal .tercio .infotxt span {
+  border: 1px solid rgba(231, 58, 27, 0.932);
+  background-color: white;
+  color: rgba(231, 58, 27, 0.932);
+  padding: 10px 30px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  margin: 10px auto;
+}
+@media (max-width: 450px) {
+  .principal .tercio .infotxt span {
+    padding: 10px 15px;
+  }
+}
+.principal .tercio .infotxt span:hover {
+  background-color: rgba(231, 58, 27, 0.932);
+  color: white;
+}
+.principal .tercio .infotxt a {
+  border: 1px solid rgba(231, 58, 27, 0.932);
+  background-color: white;
+  color: rgba(231, 58, 27, 0.932);
+  padding: 10px 30px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  margin: 10px auto;
+  text-decoration: none;
+}
+@media (max-width: 450px) {
+  .principal .tercio .infotxt a {
+    padding: 10px 15px;
+  }
+}
+.principal .tercio .infotxt a:hover {
+  background-color: rgba(231, 58, 27, 0.932);
+  color: white;
+}
+.principal .txt {
+  margin-top: 150px;
+  padding-bottom: 150px;
+  gap: 150px;
+}
+@media (max-width: 450px) {
+  .principal .txt {
+    flex-direction: column;
+  }
+}
+.principal .txt h2 {
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  transition: 0.5s;
+  font-weight: 400;
+}
+.principal .txt:hover h2 {
+  color: rgba(231, 58, 27, 0.932);
+}
+.principal .txt:hover .tit h2 {
+  color: black;
+}
+.principal .txt p {
+  text-align: justify;
+  font-size: 30px;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  border-left: 2px solid rgba(231, 58, 27, 0.932);
+  padding-left: 30px;
+}
+.principal .txt h3 {
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  transition: 0.5s;
+  text-align: right;
+}
+
+.hoteles {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+@media (max-width: 450px) {
+  .hoteles .rojo {
+    flex-direction: column;
+  }
+}
+.hoteles .media {
+  flex: 1;
+  gap: 20px;
+}
+@media (max-width: 450px) {
+  .hoteles .media {
+    gap: 22px;
+  }
+}
+.hoteles .media .hotel {
+  background-image: url(../img/web_0000s_0010_pexels-pixabay-271643.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  flex-basis: 45%;
+  border-radius: 10px;
+}
+@media (max-width: 450px) {
+  .hoteles .media .hotel {
+    flex-basis: 47%;
+    margin-bottom: 20px;
+  }
+}
+.hoteles .media .hotel .box {
+  font-family: "Raleway", sans-serif;
+  margin-top: 15px;
+  margin-left: 15px;
+  height: 75%;
+  color: white;
+}
+.hoteles .media .hotel .box h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.hoteles .media .hotel .box p {
+  font-size: 15px;
+}
+.hoteles .media .hotel .precio {
+  background-color: #2e6ff2;
+  color: white;
+  width: 55px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.hoteles .media .hotel .precio p {
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+.hoteles .media .hotel .precio h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  color: white;
+}
+.hoteles .media .hotel .flecha {
+  background-color: white;
+  width: 35px;
+  height: 45px;
+  margin-right: 10px;
+}
+.hoteles .media .hotel .flecha i {
+  color: #2e6ff2;
+}
+.hoteles .media .hoteluno {
+  background-image: url(../img/web_0000s_0020_pexels-jonathan-borba-3144580.jpg);
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  flex-basis: 45%;
+  border-radius: 10px;
+}
+.hoteles .media .hoteluno .box {
+  font-family: "Raleway", sans-serif;
+  margin-top: 15px;
+  margin-left: 15px;
+  height: 75%;
+  color: white;
+}
+.hoteles .media .hoteluno .box h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.hoteles .media .hoteluno .box p {
+  font-size: 15px;
+}
+.hoteles .media .hoteluno .precio {
+  background-color: #2e6ff2;
+  color: white;
+  width: 55px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.hoteles .media .hoteluno .precio p {
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+.hoteles .media .hoteluno .precio h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  color: white;
+}
+.hoteles .media .hoteluno .flecha {
+  background-color: white;
+  width: 35px;
+  height: 45px;
+  margin-right: 10px;
+}
+.hoteles .media .hoteluno .flecha i {
+  color: #2e6ff2;
+}
+.hoteles .media .hoteldos {
+  background-image: url(../img/web_0000s_0031_2pexels-asad-photo-maldives-1268855.jpg);
+  height: 50vh;
+  background-size: cover;
+  background-position: bottom;
+  border-radius: 10px;
+}
+.hoteles .media .hoteldos .box {
+  font-family: "Raleway", sans-serif;
+  padding-top: 15px;
+  padding-left: 15px;
+  height: 80%;
+  color: white;
+}
+.hoteles .media .hoteldos .box h4 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.hoteles .media .hoteldos .box p {
+  font-size: 15px;
+}
+.hoteles .media .hoteldos .precio {
+  background-color: #2e6ff2;
+  color: white;
+  width: 55px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.hoteles .media .hoteldos .precio p {
+  font-family: "Raleway", sans-serif;
+  color: white;
+}
+.hoteles .media .hoteldos .precio h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  color: white;
+}
+.hoteles .media .hoteldos .flecha {
+  background-color: white;
+  width: 35px;
+  height: 45px;
+  margin-right: 10px;
+}
+.hoteles .media .hoteldos .flecha i {
+  color: #2e6ff2;
+}
+
+.destino {
+  padding-top: 150px;
+  background-color: #E5E5E5;
+  cursor: pointer;
+  padding-bottom: 150px;
+}
+.destino .texto {
+  background-image: url(../img/web_0000s_0027_beautiful-wooden-pathway-going-the-breathtaking-colorful-trees-in-forest.jpg);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: #FFFFFF;
+  -webkit-animation: mueve 3s ease infinite;
+          animation: mueve 3s ease infinite;
+  margin-top: 150px;
+}
+@-webkit-keyframes mueve {
+  from {
+    background-position: center 25%;
+  }
+  to {
+    background-position: center 50%;
+  }
+}
+@keyframes mueve {
+  from {
+    background-position: center 25%;
+  }
+  to {
+    background-position: center 50%;
+  }
+}
+.destino .texto h2 {
+  font-size: 70px;
+  font-family: "Raleway", sans-serif;
+  transition: 0.5s;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+@media (max-width: 450px) {
+  .destino .texto h2 {
+    font-size: 30px;
+  }
+}
+.destino .texto:hover h2 {
+  color: rgba(231, 58, 27, 0.932);
+}
+.destino .texto p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+}
+@media (max-width: 450px) {
+  .destino .texto p {
+    font-size: 12px;
+  }
+}
+.destino .parrafo p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  margin-bottom: 50px;
+}
+.destino .mitad {
+  margin-top: 150px;
+  box-shadow: 0px 0px 6px #a19e9e;
+}
+@media (max-width: 1000px) {
+  .destino .mitad {
+    flex-direction: column;
+  }
+}
+.destino .mitad .cuartos {
+  width: 100%;
+  height: 100%;
+}
+.destino .mitad .cuartos .seca {
+  transition: 1s;
+  z-index: 999;
+}
+.destino .mitad .cuartos .seca img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  display: block;
+}
+.destino .mitad .cuartos .seca .zoom {
+  position: relative;
+  bottom: 250px;
+  left: 250px;
+  background-color: #ffffff78;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
+}
+@media (max-width: 1000px) {
+  .destino .mitad .cuartos .seca .zoom {
+    position: relative;
+    bottom: 250px;
+    left: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .destino .mitad .cuartos .seca .zoom {
+    position: relative;
+    bottom: 180px;
+    left: 100px;
+  }
+}
+.destino .mitad .cuartos .seca .zoom p {
+  font-size: 30px;
+}
+.destino .mitad .detalles {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+.destino .mitad .detalles .rectangulo {
+  width: 250px;
+  height: 70px;
+  color: rgba(231, 58, 27, 0.932);
+  text-transform: uppercase;
+  border-radius: 15px;
+  margin: 5px auto;
+  padding: 5px 0;
+  text-align: center;
+}
+.destino .mitad .detalles .rectangulo p {
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  color: rgba(231, 58, 27, 0.932);
+  font-weight: bold;
+}
+.destino .mitad .detalles .rectangulodos p {
+  font-size: 25px;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  margin-top: 15px;
+}
+.destino .mitad .detalles .rectangulodos .icono i {
+  margin-right: 15px;
+  color: black;
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 7px;
+}
+.destino .mitad .detalles .btn {
+  border: 3px solid rgba(231, 58, 27, 0.932);
+  color: white;
+  background-color: rgba(231, 58, 27, 0.932);
+  padding: 20px 50px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.destino .mitad .detalles .btn:hover {
+  background-color: white;
+  color: rgba(231, 58, 27, 0.932);
+  border: 1px solid rgba(231, 58, 27, 0.932);
+}
+.destino .caja {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000ba;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  display: none;
+}
+@media (max-width: 450px) {
+  .destino .caja {
+    width: 100%;
+  }
+}
+.destino .caja .efecto {
+  width: 900px;
+  height: 500px;
+  z-index: 999999;
+  background-image: url(../img/web_0000s_0006_pexels-tyler-lastovich-733993.jpg);
+  background-size: cover;
+}
+@media (max-width: 450px) {
+  .destino .caja .efecto {
+    width: 300px;
+    height: 350px;
+  }
+}
+.destino .caja .efecto .cierre {
+  width: 50px;
+  height: 50px;
+  background: white;
+  color: white;
+  position: absolute;
+  border-radius: 100%;
+  top: 20px;
+  right: 20px;
+}
+.destino .caja .efecto .cierre p {
+  font-size: 30px;
+  color: black;
+}
+.destino .caja.activo {
+  z-index: 999999;
+  display: flex;
+}
+
+.destino {
+  padding-top: 150px;
+  background-color: #E5E5E5;
+  cursor: pointer;
+  padding-bottom: 150px;
+}
+.destino .mitad {
+  margin-top: 150px;
+  box-shadow: 0px 0px 6px #a19e9e;
+}
+@media (max-width: 1000px) {
+  .destino .mitad {
+    flex-direction: column;
+  }
+}
+.destino .mitad .cuartosuno {
+  width: 100%;
+  height: 100%;
+}
+.destino .mitad .cuartosuno .seca {
+  transition: 1s;
+  z-index: 999;
+}
+.destino .mitad .cuartosuno .seca img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  display: block;
+}
+.destino .mitad .cuartosuno .seca .zoomuno {
+  position: relative;
+  bottom: 250px;
+  left: 250px;
+  background-color: #ffffff78;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
+}
+@media (max-width: 1000px) {
+  .destino .mitad .cuartosuno .seca .zoomuno {
+    position: relative;
+    bottom: 250px;
+    left: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .destino .mitad .cuartosuno .seca .zoomuno {
+    position: relative;
+    bottom: 180px;
+    left: 100px;
+  }
+}
+.destino .mitad .cuartosuno .seca .zoomuno p {
+  font-size: 30px;
+}
+.destino .mitad .detalles {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+.destino .mitad .detalles .rectangulo {
+  width: 250px;
+  height: 70px;
+  color: rgba(231, 58, 27, 0.932);
+  text-transform: uppercase;
+  border-radius: 15px;
+  margin: 5px auto;
+  padding: 5px 0;
+  text-align: center;
+}
+.destino .mitad .detalles .rectangulo p {
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  color: rgba(231, 58, 27, 0.932);
+  font-weight: bold;
+}
+.destino .mitad .detalles .rectangulodos p {
+  font-size: 25px;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  margin-top: 15px;
+}
+.destino .mitad .detalles .rectangulodos .icono i {
+  margin-right: 15px;
+  color: black;
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 7px;
+}
+.destino .mitad .detalles .btn {
+  border: 3px solid rgba(231, 58, 27, 0.932);
+  color: white;
+  background-color: rgba(231, 58, 27, 0.932);
+  padding: 20px 50px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.destino .mitad .detalles .btn:hover {
+  background-color: white;
+  color: rgba(231, 58, 27, 0.932);
+  border: 1px solid rgba(231, 58, 27, 0.932);
+}
+.destino .cajauno {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000ba;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  display: none;
+}
+@media (max-width: 450px) {
+  .destino .cajauno {
+    width: 100%;
+  }
+}
+.destino .cajauno .efectouno {
+  width: 900px;
+  height: 500px;
+  z-index: 999999;
+  background-image: url(../img/web_0000s_0016_pexels-daniel-frese-1547735.jpg);
+  background-size: cover;
+}
+@media (max-width: 450px) {
+  .destino .cajauno .efectouno {
+    width: 300px;
+    height: 350px;
+  }
+}
+.destino .cajauno .efectouno .cierre {
+  width: 50px;
+  height: 50px;
+  background: white;
+  color: white;
+  position: absolute;
+  border-radius: 100%;
+  top: 20px;
+  right: 20px;
+}
+.destino .cajauno .efectouno .cierre p {
+  font-size: 30px;
+  color: black;
+}
+.destino .cajauno.activo {
+  z-index: 999999;
+  display: flex;
+}
+
+.destino {
+  padding-top: 150px;
+  background-color: #E5E5E5;
+  cursor: pointer;
+  padding-bottom: 150px;
+}
+.destino .mitad {
+  margin-top: 150px;
+  box-shadow: 0px 0px 6px #a19e9e;
+}
+@media (max-width: 1000px) {
+  .destino .mitad {
+    flex-direction: column;
+  }
+}
+.destino .mitad .cuartosdos {
+  width: 100%;
+  height: 100%;
+}
+.destino .mitad .cuartosdos .seca {
+  transition: 1s;
+  z-index: 999;
+}
+.destino .mitad .cuartosdos .seca img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  display: block;
+}
+.destino .mitad .cuartosdos .seca .zoomdos {
+  position: relative;
+  bottom: 250px;
+  left: 250px;
+  background-color: #ffffff78;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
+}
+@media (max-width: 1000px) {
+  .destino .mitad .cuartosdos .seca .zoomdos {
+    position: relative;
+    bottom: 250px;
+    left: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .destino .mitad .cuartosdos .seca .zoomdos {
+    position: relative;
+    bottom: 180px;
+    left: 100px;
+  }
+}
+.destino .mitad .cuartosdos .seca .zoomdos p {
+  font-size: 30px;
+}
+.destino .mitad .detalles {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+.destino .mitad .detalles .rectangulo {
+  width: 250px;
+  height: 70px;
+  color: rgba(231, 58, 27, 0.932);
+  text-transform: uppercase;
+  border-radius: 15px;
+  margin: 5px auto;
+  padding: 5px 0;
+  text-align: center;
+}
+.destino .mitad .detalles .rectangulo p {
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  color: rgba(231, 58, 27, 0.932);
+  font-weight: bold;
+}
+.destino .mitad .detalles .rectangulodos p {
+  font-size: 25px;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  margin-top: 15px;
+}
+.destino .mitad .detalles .rectangulodos .icono i {
+  margin-right: 15px;
+  color: black;
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 7px;
+}
+.destino .mitad .detalles .btn {
+  border: 3px solid rgba(231, 58, 27, 0.932);
+  color: white;
+  background-color: rgba(231, 58, 27, 0.932);
+  padding: 20px 50px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.destino .mitad .detalles .btn:hover {
+  background-color: white;
+  color: rgba(231, 58, 27, 0.932);
+  border: 1px solid rgba(231, 58, 27, 0.932);
+}
+.destino .cajados {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000ba;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  display: none;
+}
+@media (max-width: 450px) {
+  .destino .cajados {
+    width: 100%;
+  }
+}
+.destino .cajados .efectodos {
+  width: 900px;
+  height: 500px;
+  z-index: 999999;
+  background-image: url(../img/web_0000s_0008_pexels-pixabay-532263.jpg);
+  background-size: cover;
+}
+@media (max-width: 450px) {
+  .destino .cajados .efectodos {
+    width: 300px;
+    height: 350px;
+  }
+}
+.destino .cajados .efectodos .cierre {
+  width: 50px;
+  height: 50px;
+  background: white;
+  color: white;
+  position: absolute;
+  border-radius: 100%;
+  top: 20px;
+  right: 20px;
+}
+.destino .cajados .efectodos .cierre p {
+  font-size: 30px;
+  color: black;
+}
+.destino .cajados.activo {
+  z-index: 999999;
+  display: flex;
+}
+
+.destino {
+  padding-top: 150px;
+  background-color: #E5E5E5;
+  cursor: pointer;
+  padding-bottom: 150px;
+}
+.destino .mitad {
+  margin-top: 150px;
+  box-shadow: 0px 0px 6px #a19e9e;
+}
+@media (max-width: 1000px) {
+  .destino .mitad {
+    flex-direction: column;
+  }
+}
+.destino .mitad .cuartostres {
+  width: 100%;
+  height: 100%;
+}
+.destino .mitad .cuartostres .seca {
+  transition: 1s;
+  z-index: 999;
+}
+.destino .mitad .cuartostres .seca img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  display: block;
+}
+.destino .mitad .cuartostres .seca .zoomtres {
+  position: relative;
+  bottom: 250px;
+  left: 250px;
+  background-color: #ffffff78;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
+}
+@media (max-width: 1000px) {
+  .destino .mitad .cuartostres .seca .zoomtres {
+    position: relative;
+    bottom: 250px;
+    left: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .destino .mitad .cuartostres .seca .zoomtres {
+    position: relative;
+    bottom: 180px;
+    left: 100px;
+  }
+}
+.destino .mitad .cuartostres .seca .zoomtres p {
+  font-size: 30px;
+}
+.destino .mitad .detalles {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+.destino .mitad .detalles .rectangulo {
+  width: 250px;
+  height: 70px;
+  color: rgba(231, 58, 27, 0.932);
+  text-transform: uppercase;
+  border-radius: 15px;
+  margin: 5px auto;
+  padding: 5px 0;
+  text-align: center;
+}
+.destino .mitad .detalles .rectangulo p {
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  color: rgba(231, 58, 27, 0.932);
+  font-weight: bold;
+}
+.destino .mitad .detalles .rectangulo .arraial {
+  font-size: 28px;
+  display: inline-block;
+}
+.destino .mitad .detalles .rectangulodos p {
+  font-size: 25px;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  margin-top: 15px;
+}
+@media (max-width: 450px) {
+  .destino .mitad .detalles .rectangulodos p {
+    font-size: 20px;
+  }
+}
+.destino .mitad .detalles .rectangulodos .icono i {
+  margin-right: 15px;
+  color: black;
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 7px;
+}
+.destino .mitad .detalles .btn {
+  border: 3px solid rgba(231, 58, 27, 0.932);
+  color: white;
+  background-color: rgba(231, 58, 27, 0.932);
+  padding: 20px 50px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.destino .mitad .detalles .btn:hover {
+  background-color: white;
+  color: rgba(231, 58, 27, 0.932);
+  border: 1px solid rgba(231, 58, 27, 0.932);
+}
+.destino .cajatres {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000ba;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  display: none;
+}
+@media (max-width: 450px) {
+  .destino .cajatres {
+    width: 100%;
+  }
+}
+.destino .cajatres .efectotres {
+  width: 900px;
+  height: 500px;
+  z-index: 999999;
+  background-image: url(../img/web_0000s_0032_beautiful-ocean-waves-hitting-the-rocky-cliffs-great-for-wallpapers.jpg);
+  background-size: cover;
+}
+@media (max-width: 450px) {
+  .destino .cajatres .efectotres {
+    width: 300px;
+    height: 350px;
+  }
+}
+.destino .cajatres .efectotres .cierre {
+  width: 50px;
+  height: 50px;
+  background: white;
+  color: white;
+  position: absolute;
+  border-radius: 100%;
+  top: 20px;
+  right: 20px;
+}
+.destino .cajatres .efectotres .cierre p {
+  font-size: 30px;
+  color: black;
+}
+.destino .cajatres.activo {
+  z-index: 999999;
+  display: flex;
+}
+
+.destino {
+  padding-top: 150px;
+  background-color: #E5E5E5;
+  cursor: pointer;
+  padding-bottom: 150px;
+}
+.destino .mitad {
+  margin-top: 150px;
+  box-shadow: 0px 0px 6px #a19e9e;
+}
+@media (max-width: 1000px) {
+  .destino .mitad {
+    flex-direction: column;
+  }
+}
+.destino .mitad .cuartoscuatro {
+  width: 100%;
+  height: 100%;
+}
+.destino .mitad .cuartoscuatro .seca {
+  transition: 1s;
+  z-index: 999;
+}
+.destino .mitad .cuartoscuatro .seca img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  display: block;
+}
+.destino .mitad .cuartoscuatro .seca .zoomcuatro {
+  position: relative;
+  bottom: 250px;
+  left: 250px;
+  background-color: #ffffff78;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin-left: 10px;
+  margin-top: 10px;
+  display: flex;
+}
+@media (max-width: 1000px) {
+  .destino .mitad .cuartoscuatro .seca .zoomcuatro {
+    position: relative;
+    bottom: 250px;
+    left: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .destino .mitad .cuartoscuatro .seca .zoomcuatro {
+    position: relative;
+    bottom: 180px;
+    left: 100px;
+  }
+}
+.destino .mitad .cuartoscuatro .seca .zoomcuatro p {
+  font-size: 30px;
+}
+.destino .mitad .detalles {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 2px;
+  padding: 40px 0;
+}
+.destino .mitad .detalles .rectangulo {
+  width: 250px;
+  height: 70px;
+  color: rgba(231, 58, 27, 0.932);
+  text-transform: uppercase;
+  border-radius: 15px;
+  margin: 5px auto;
+  padding: 5px 0;
+  text-align: center;
+}
+.destino .mitad .detalles .rectangulo p {
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  color: rgba(231, 58, 27, 0.932);
+  font-weight: bold;
+}
+@media (max-width: 450px) {
+  .destino .mitad .detalles .rectangulo p {
+    font-size: 45px;
+  }
+}
+.destino .mitad .detalles .rectangulodos p {
+  font-size: 25px;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+  margin-top: 15px;
+}
+@media (max-width: 450px) {
+  .destino .mitad .detalles .rectangulodos p {
+    font-size: 20px;
+  }
+}
+.destino .mitad .detalles .rectangulodos .icono i {
+  margin-right: 15px;
+  color: black;
+  font-size: 25px;
+  margin-bottom: 20px;
+  margin-top: 7px;
+}
+.destino .mitad .detalles .btn {
+  border: 3px solid rgba(231, 58, 27, 0.932);
+  color: white;
+  background-color: rgba(231, 58, 27, 0.932);
+  padding: 20px 50px;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+@media (max-width: 450px) {
+  .destino .mitad .detalles .btn {
+    padding: 20px 40px;
+  }
+}
+.destino .mitad .detalles .btn:hover {
+  background-color: white;
+  color: rgba(231, 58, 27, 0.932);
+  border: 1px solid rgba(231, 58, 27, 0.932);
+}
+.destino .cajacuatro {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #000000ba;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  display: none;
+}
+@media (max-width: 450px) {
+  .destino .cajacuatro {
+    width: 100%;
+  }
+}
+.destino .cajacuatro .efectocuatro {
+  width: 900px;
+  height: 500px;
+  z-index: 999999;
+  background-image: url(../img/web_0000s_0009_pexels-s-migaj-747964.jpg);
+  background-size: cover;
+}
+@media (max-width: 450px) {
+  .destino .cajacuatro .efectocuatro {
+    width: 300px;
+    height: 350px;
+  }
+}
+.destino .cajacuatro .efectocuatro .cierre {
+  width: 50px;
+  height: 50px;
+  background: white;
+  color: white;
+  position: absolute;
+  border-radius: 100%;
+  top: 20px;
+  right: 20px;
+}
+.destino .cajacuatro .efectocuatro .cierre p {
+  font-size: 30px;
+  color: black;
+}
+.destino .cajacuatro.activo {
+  z-index: 999999;
+  display: flex;
+}
+
+.destino.uno {
+  background-color: white;
+}
+.destino.uno .texto {
+  background-image: url(../img/web_0000s_0027_beautiful-wooden-pathway-going-the-breathtaking-colorful-trees-in-forest.jpg);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: #FFFFFF;
+  -webkit-animation: filling 3s ease infinite;
+          animation: filling 3s ease infinite;
+  margin-top: 150px;
+}
+@-webkit-keyframes filling {
+  from {
+    background-position: center 25%;
+  }
+  to {
+    background-position: center 50%;
+  }
+}
+@keyframes filling {
+  from {
+    background-position: center 25%;
+  }
+  to {
+    background-position: center 50%;
+  }
+}
+.destino.uno .texto h2 {
+  font-size: 70px;
+  font-family: "Raleway", sans-serif;
+  transition: 0.5s;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+@media (max-width: 450px) {
+  .destino.uno .texto h2 {
+    font-size: 25px;
+  }
+}
+.destino.uno .texto:hover h2 {
+  color: rgba(231, 58, 27, 0.932);
+}
+.destino.uno .texto p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+}
+@media (max-width: 450px) {
+  .destino.uno .texto p {
+    font-size: 12px;
+  }
+}
+
+.aventura {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+.aventura .txt {
+  padding-bottom: 200px;
+  gap: 150px;
+}
+@media (max-width: 450px) {
+  .aventura .txt {
+    flex-direction: column;
+  }
+}
+.aventura .txt h2 {
+  font-size: 50px;
+  font-family: "Raleway", sans-serif;
+  transition: 0.5s;
+  font-weight: 300;
+}
+.aventura .txt:hover h2 {
+  color: rgba(231, 58, 27, 0.932);
+}
+.aventura .txt p {
+  text-align: justify;
+  font-size: 30px;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+  border-left: 3px solid rgba(231, 58, 27, 0.932);
+  padding-left: 30px;
+}
+.aventura .experiencias {
+  padding-bottom: 150px;
+}
+.aventura .experiencias .miti {
+  flex: 1;
+  gap: 30px;
+  margin-top: 30px;
+  padding-bottom: 50px;
+  cursor: pointer;
+}
+@media (max-width: 450px) {
+  .aventura .experiencias .miti {
+    flex-direction: column;
+  }
+}
+.aventura .experiencias .miti .mitades {
+  flex: 1;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.aventura .experiencias .miti .mitades .foto {
+  background-image: url(../img/web_0000s_0025_maldives-island.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 300px;
+}
+.aventura .experiencias .miti .mitades .foto .box {
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.aventura .experiencias .miti .mitades .foto .precio {
+  background-color: #2e6ff2;
+  color: white;
+  width: 55px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.aventura .experiencias .miti .mitades .foto .precio p {
+  font-family: "Raleway", sans-serif;
+}
+.aventura .experiencias .miti .mitades .foto .precio h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+.aventura .experiencias .miti .mitades .foto .flecha {
+  background-color: white;
+  width: 35px;
+  height: 45px;
+  margin-right: 10px;
+}
+@media (max-width: 1000px) {
+  .aventura .experiencias .miti .mitades .foto .flecha {
+    margin-bottom: 10px;
+  }
+}
+.aventura .experiencias .miti .mitades .foto .flecha i {
+  color: #2e6ff2;
+}
+.aventura .experiencias .miti .mitades .foto:hover {
+  filter: grayscale(2);
+}
+.aventura .experiencias .miti .mitades .fotouno {
+  background-image: url(../img/web_0000s_0026_couple-together-kayaking-on-the-river.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 300px;
+}
+.aventura .experiencias .miti .mitades .fotouno:hover {
+  filter: grayscale(2);
+}
+.aventura .experiencias .miti .mitades .fotouno .box {
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.aventura .experiencias .miti .mitades .fotouno .precio {
+  background-color: #2e6ff2;
+  color: white;
+  width: 55px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.aventura .experiencias .miti .mitades .fotouno .precio p {
+  font-family: "Raleway", sans-serif;
+}
+.aventura .experiencias .miti .mitades .fotouno .precio h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+.aventura .experiencias .miti .mitades .fotouno .flecha {
+  background-color: white;
+  width: 35px;
+  height: 45px;
+  margin-right: 10px;
+}
+@media (max-width: 1000px) {
+  .aventura .experiencias .miti .mitades .fotouno .flecha {
+    margin-bottom: 10px;
+  }
+}
+.aventura .experiencias .miti .mitades .fotouno .flecha i {
+  color: #2e6ff2;
+}
+.aventura .experiencias .miti .mitades .fotodos {
+  background-image: url(../img/web_0000s_0013_pexels-nina-uhlíková-725255.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 300px;
+}
+.aventura .experiencias .miti .mitades .fotodos:hover {
+  filter: grayscale(2);
+}
+.aventura .experiencias .miti .mitades .fotodos .box {
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.aventura .experiencias .miti .mitades .fotodos .precio {
+  background-color: #2e6ff2;
+  color: white;
+  width: 55px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.aventura .experiencias .miti .mitades .fotodos .precio p {
+  font-family: "Raleway", sans-serif;
+}
+.aventura .experiencias .miti .mitades .fotodos .precio h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+.aventura .experiencias .miti .mitades .fotodos .flecha {
+  background-color: white;
+  width: 35px;
+  height: 45px;
+  margin-right: 10px;
+}
+@media (max-width: 1000px) {
+  .aventura .experiencias .miti .mitades .fotodos .flecha {
+    margin-bottom: 10px;
+  }
+}
+.aventura .experiencias .miti .mitades .fotodos .flecha i {
+  color: #2e6ff2;
+}
+.aventura .experiencias .miti .mitades .fototres {
+  background-image: url(../img/pexels-yunus-tuğ-7877526.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+.aventura .experiencias .miti .mitades .fototres:hover {
+  filter: grayscale(2);
+}
+.aventura .experiencias .miti .mitades .fototres .box {
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.aventura .experiencias .miti .mitades .fototres .precio {
+  background-color: #2e6ff2;
+  color: white;
+  width: 55px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.aventura .experiencias .miti .mitades .fototres .precio p {
+  font-family: "Raleway", sans-serif;
+}
+.aventura .experiencias .miti .mitades .fototres .precio h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+.aventura .experiencias .miti .mitades .fototres .flecha {
+  background-color: white;
+  width: 35px;
+  height: 45px;
+  margin-right: 10px;
+}
+@media (max-width: 1000px) {
+  .aventura .experiencias .miti .mitades .fototres .flecha {
+    margin-bottom: 10px;
+  }
+}
+.aventura .experiencias .miti .mitades .fototres .flecha i {
+  color: #2e6ff2;
+}
+.aventura .experiencias .miti .mitades .fotocuatro {
+  background-image: url(../img/web_0000s_0017_pexels-brandon-benedict-9714946.jpg);
+  background-size: cover;
+  background-position: bottom;
+  height: 300px;
+}
+.aventura .experiencias .miti .mitades .fotocuatro:hover {
+  filter: grayscale(2);
+}
+.aventura .experiencias .miti .mitades .fotocuatro .box {
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.aventura .experiencias .miti .mitades .fotocuatro .precio {
+  background-color: #2e6ff2;
+  color: white;
+  width: 55px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.aventura .experiencias .miti .mitades .fotocuatro .precio p {
+  font-family: "Raleway", sans-serif;
+}
+.aventura .experiencias .miti .mitades .fotocuatro .precio h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+.aventura .experiencias .miti .mitades .fotocuatro .flecha {
+  background-color: white;
+  width: 35px;
+  height: 45px;
+  margin-right: 10px;
+}
+@media (max-width: 1000px) {
+  .aventura .experiencias .miti .mitades .fotocuatro .flecha {
+    margin-bottom: 10px;
+  }
+}
+.aventura .experiencias .miti .mitades .fotocuatro .flecha i {
+  color: #2e6ff2;
+}
+.aventura .experiencias .miti .mitades .fotocinco {
+  background-image: url(../img/web_0000s_0012_pexels-pixabay-371589.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 300px;
+}
+.aventura .experiencias .miti .mitades .fotocinco:hover {
+  filter: grayscale(2);
+}
+.aventura .experiencias .miti .mitades .fotocinco .box {
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.aventura .experiencias .miti .mitades .fotocinco .precio {
+  background-color: #2e6ff2;
+  color: white;
+  width: 55px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.aventura .experiencias .miti .mitades .fotocinco .precio p {
+  font-family: "Raleway", sans-serif;
+}
+.aventura .experiencias .miti .mitades .fotocinco .precio h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+.aventura .experiencias .miti .mitades .fotocinco .flecha {
+  background-color: white;
+  width: 35px;
+  height: 45px;
+  margin-right: 10px;
+}
+@media (max-width: 1000px) {
+  .aventura .experiencias .miti .mitades .fotocinco .flecha {
+    margin-bottom: 10px;
+  }
+}
+.aventura .experiencias .miti .mitades .fotocinco .flecha i {
+  color: #2e6ff2;
+}
+.aventura .experiencias .miti .mitades .fotoseis {
+  background-image: url(../img/web_0000s_0018_pexels-asad-photo-maldives-3601425.jpg);
+  background-size: cover;
+  background-position: top;
+  height: 300px;
+}
+.aventura .experiencias .miti .mitades .fotoseis:hover {
+  filter: grayscale(2);
+}
+.aventura .experiencias .miti .mitades .fotoseis .box {
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.aventura .experiencias .miti .mitades .fotoseis .precio {
+  background-color: #2e6ff2;
+  color: white;
+  width: 55px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.aventura .experiencias .miti .mitades .fotoseis .precio p {
+  font-family: "Raleway", sans-serif;
+}
+.aventura .experiencias .miti .mitades .fotoseis .precio h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+.aventura .experiencias .miti .mitades .fotoseis .flecha {
+  background-color: white;
+  width: 35px;
+  height: 45px;
+  margin-right: 10px;
+}
+@media (max-width: 1000px) {
+  .aventura .experiencias .miti .mitades .fotoseis .flecha {
+    margin-bottom: 10px;
+  }
+}
+.aventura .experiencias .miti .mitades .fotoseis .flecha i {
+  color: #2e6ff2;
+}
+.aventura .experiencias .miti .mitades .fotosiete {
+  background-image: url(../img/web_0000s_0015_pexels-pixabay-259967.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+.aventura .experiencias .miti .mitades .fotosiete:hover {
+  filter: grayscale(2);
+}
+.aventura .experiencias .miti .mitades .fotosiete .box {
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.aventura .experiencias .miti .mitades .fotosiete .precio {
+  background-color: #2e6ff2;
+  color: white;
+  width: 55px;
+  height: 45px;
+  margin-bottom: 10px;
+}
+.aventura .experiencias .miti .mitades .fotosiete .precio p {
+  font-family: "Raleway", sans-serif;
+}
+.aventura .experiencias .miti .mitades .fotosiete .precio h6 {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+}
+.aventura .experiencias .miti .mitades .fotosiete .flecha {
+  background-color: white;
+  width: 35px;
+  height: 45px;
+  margin-right: 10px;
+}
+@media (max-width: 1000px) {
+  .aventura .experiencias .miti .mitades .fotosiete .flecha {
+    margin-bottom: 10px;
+  }
+}
+.aventura .experiencias .miti .mitades .fotosiete .flecha i {
+  color: #2e6ff2;
+}
+
+footer {
+  height: 60vh;
+  padding: 30px 0;
+  background-image: url(../img/pexels-photo-2479635.jpeg);
+  background-size: cover;
+  background-position: bottom right;
+  background-attachment: fixed;
+}
+footer .contac {
+  background-color: white;
+  height: 12vh;
+  margin: 30px auto;
+  border-radius: 20px 40px 40px 20px;
+  width: 40%;
+}
+@media (max-width: 1000px) {
+  footer .contac {
+    width: 41%;
+  }
+}
+@media (max-width: 450px) {
+  footer .contac {
+    width: 65%;
+    height: 8vh;
+  }
+}
+footer .contac p {
+  display: block;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  color: black;
+  padding: 7px;
+  margin-right: 10px;
+  font-size: 20px;
+}
+@media (max-width: 1000px) {
+  footer .contac p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 450px) {
+  footer .contac p {
+    display: none;
+  }
+}
+footer .contac input {
+  display: block;
+  border: none;
+  padding: 5px;
+  height: 50px;
+  background-color: white;
+  outline: none;
+  border-radius: 20px 40px 40px 20px;
+}
+@media (max-width: 1000px) {
+  footer .contac input {
+    padding: 0;
+  }
+}
+footer .contac input:hover {
+  background-color: rgba(128, 128, 128, 0.103);
+  border-radius: 20px;
+}
+footer .contac ::-moz-placeholder {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+footer .contac :-ms-input-placeholder {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+footer .contac ::placeholder {
+  font-family: "Raleway", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+  text-align: center;
+}
+footer .contac a {
+  background-color: rgba(231, 58, 27, 0.932);
+  border-radius: 40px;
+  color: white;
+  padding: 10px 10px;
+  margin-left: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+}
+@media (max-width: 1000px) {
+  footer .contac a {
+    margin-left: 0;
+    padding: 10px 5px;
+  }
+}
+footer .redes i {
+  color: white;
+  margin-right: 100px;
+  font-size: 30px;
+  margin-top: 15px;
+}
+@media (max-width: 1000px) {
+  footer .redes i {
+    margin-right: 60px;
+  }
+}
+@media (max-width: 450px) {
+  footer .redes i {
+    font-size: 15px;
+  }
+}
+footer .redes i:last-child {
+  margin-right: 0;
+}
+footer .redes i:hover {
+  transform: scale(1.2);
+}
+footer .menufooter {
+  padding-bottom: 30px;
+}
+@media (max-width: 1000px) {
+  footer .menufooter {
+    padding-bottom: 0;
+  }
+}
+footer .menufooter ul li {
+  list-style: none;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-right: 40px;
+  margin-right: 10px;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 20px;
+}
+@media (max-width: 1000px) {
+  footer .menufooter ul li {
+    padding-right: 10px;
+  }
+}
+@media (max-width: 450px) {
+  footer .menufooter ul li {
+    padding-right: 0;
+    font-size: 10px;
+  }
+}
+footer .menufooter ul li:hover {
+  color: rgba(231, 58, 27, 0.932);
+}
+footer .menufooter ul li:hover i {
+  transform: scale(1.3);
+}
+footer .menufooter ul li i {
+  color: rgba(231, 58, 27, 0.932);
+}
+footer .menufooter ul li a {
+  list-style: none;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  padding-right: 40px;
+  margin-right: 10px;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+@media (max-width: 450px) {
+  footer .menufooter ul li a {
+    font-size: 10px;
+  }
+}
+footer .menufooter ul li a:hover {
+  color: rgba(231, 58, 27, 0.932);
+}
+footer .menufooter ul .titulof {
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(231, 58, 27, 0.932);
+}
+footer .menufooter.uno li {
+  margin-right: 0;
+}
+
+/*section destino*/
+.cabecera.nueva {
+  background-image: url(../img/pexels-photo-373458.jpeg);
+  background-size: cover;
+  background-position: bottom;
+}
+.cabecera.nueva .menu.nuevo li a {
+  text-decoration: none;
+  color: white;
+}
+.cabecera.nueva .menu.activo {
+  background-color: #E5E5E5;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999999999999998000000000000000000000000;
+  flex-direction: column;
+}
+.cabecera.nueva .menu.activo img {
+  display: none;
+}
+.cabecera.nueva .menu.activo li {
+  font-size: 30px;
+  color: black;
+}
+.cabecera.nueva .menu.activo li a {
+  font-size: 30px;
+  color: black;
+}
+.cabecera.nueva .hamburger {
+  display: none;
+  position: relative;
+}
+@media (max-width: 450px) {
+  .cabecera.nueva .hamburger {
+    display: flex;
+    z-index: 9999999999999998000000000000000000000000;
+  }
+}
+.cabecera.nueva .formulario {
+  margin-top: 50px;
+}
+
+.principal.dos.tres {
+  margin-top: 100px;
+}
+.principal.dos.tres .txt {
+  margin-top: 0;
+  padding-bottom: 30px;
+}
+@media (max-width: 1000px) {
+  .principal.dos.tres .txt h2 {
+    border-left: none;
+  }
+}
+@media (max-width: 450px) {
+  .principal.dos.tres .txt h2 {
+    padding-left: 0;
+  }
+}
+
+.roticor {
+  height: 50vh;
+  gap: 50px;
+  margin-top: 150px;
+  margin-bottom: 300px;
+}
+@media (max-width: 450px) {
+  .roticor {
+    flex-direction: column;
+    margin-bottom: 1300px;
+  }
+}
+.roticor .cajon {
+  flex: 1;
+  position: relative;
+  perspective: 1000px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+.roticor .cajon .careta {
+  background-image: url(../img/pexels-photo-6064283.jpeg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  transition: 1s;
+}
+.roticor .cajon .careta h4 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.roticor .cajon .careta.uno {
+  background-image: url(../img/pexels-photo-7148443.jpeg);
+  background-position: left;
+  background-size: cover;
+}
+.roticor .cajon .careta.uno h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.roticor .cajon .careta.dos {
+  background-image: url(../img/pexels-photo-1024989.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.roticor .cajon .secote {
+  position: relative;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  width: 100%;
+  height: 50vh;
+  background-color: #2e6ff2;
+  transform: rotateY(180deg);
+  transition: 1s;
+  background-image: url(../img/father-daughter-beach-sea-38302.jpeg);
+  background-position: left;
+  background-size: cover;
+}
+.roticor .cajon .secote span {
+  border: 1px solid rgba(231, 58, 27, 0.932);
+  background-color: white;
+  color: rgba(231, 58, 27, 0.932);
+  padding: 10px 10px;
+  display: block;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  margin-right: auto;
+  margin-left: 10px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  text-decoration: none;
+  z-index: 999;
+}
+.roticor .cajon .secote span:hover {
+  border: 1px solid rgba(231, 58, 27, 0.932);
+  background-color: rgba(231, 58, 27, 0.932);
+  color: white;
+}
+.roticor .cajon .secote.uno {
+  background-image: url(../img/pexels-photo-1374122.jpeg);
+  background-position: left;
+  background-size: cover;
+}
+.roticor .cajon .secote.uno span {
+  margin-right: auto;
+}
+.roticor .cajon .secote.dos {
+  background-image: url(../img/pexels-photo-792726.jpeg);
+  background-position: left;
+  background-size: cover;
+}
+.roticor .cajon .secote.dos span {
+  margin-right: auto;
+}
+.roticor .cajon:hover .careta {
+  transform: rotateY(-180deg);
+}
+.roticor .cajon:hover .secote {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transform: rotateY(-10deg);
+}
+
+.destino.segunda .texto {
+  margin-top: 0;
+  background-image: url(../img/web_0000s_0000_wooden-bridge-at-koh-nangyuan-island-in-surat-thani-thailand.jpg);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: #FFFFFF;
+  -webkit-animation: mueve 3s ease infinite;
+          animation: mueve 3s ease infinite;
+}
+@keyframes mueve {
+  from {
+    background-position: center 50%;
+  }
+  to {
+    background-position: center 100%;
+  }
+}
+.destino.segunda .texto h2 {
+  font-size: 70px;
+  font-family: "Raleway", sans-serif;
+  transition: 0.5s;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+@media (max-width: 1000px) {
+  .destino.segunda .texto h2 {
+    font-size: 45px;
+  }
+}
+@media (max-width: 450px) {
+  .destino.segunda .texto h2 {
+    font-size: 21px;
+  }
+}
+.destino.segunda .texto:hover h2 {
+  color: rgba(231, 58, 27, 0.932);
+}
+.destino.segunda .texto p {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Raleway", sans-serif;
+}
+@media (max-width: 450px) {
+  .destino.segunda .texto p {
+    font-size: 13px;
+  }
+}
+
+.principal.dos .txt h2 {
+  text-transform: uppercase;
+  border-left: 2px solid rgba(231, 58, 27, 0.932);
+  padding-left: 50px;
+}
+@media (max-width: 450px) {
+  .principal.dos .txt h2 {
+    padding-left: 8px;
+    font-size: 33px;
+  }
+}
+.principal.dos .txt .tit {
+  color: rgba(231, 58, 27, 0.932);
+}
+
+.estaciones .fila {
+  height: 500px;
+  margin-top: 150px;
+  position: relative;
+  margin-bottom: 300px;
+}
+.estaciones .fila span {
+  position: absolute;
+  top: 250px;
+  left: 540px;
+  border: 1px solid rgba(231, 58, 27, 0.932);
+  background-color: white;
+  color: rgba(231, 58, 27, 0.932);
+  padding: 10px 20px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  margin: 10px auto;
+  text-decoration: none;
+  z-index: 999;
+  transition: 2s;
+}
+@media (max-width: 1000px) {
+  .estaciones .fila span {
+    display: none;
+  }
+}
+.estaciones .fila span i {
+  margin-top: 5px;
+  font-size: 20px;
+}
+.estaciones .fila span:hover {
+  border: 1px solid rgba(231, 58, 27, 0.932);
+  background-color: rgba(231, 58, 27, 0.932);
+  color: white;
+}
+.estaciones .fila .estacion {
+  flex: 1;
+  transition: 0.5s;
+  perspective: 1000px;
+  cursor: pointer;
+}
+.estaciones .fila .estacion:hover {
+  flex: 2;
+}
+.estaciones .fila .estacion h3 {
+  font-family: "Raleway", sans-serif;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 30px;
+  margin-top: 30px;
+  margin-left: 30px;
+  background-color: rgba(231, 58, 27, 0.932);
+  padding: 8px;
+}
+.estaciones .fila .estacion a {
+  border: 1px solid rgba(231, 58, 27, 0.932);
+  background-color: rgba(231, 58, 27, 0.932);
+  color: white;
+  padding: 15px 20px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  margin: 10px auto;
+  text-decoration: none;
+  margin-left: 30px;
+}
+.estaciones .fila .estacion a:hover {
+  border: 1px solid rgba(231, 58, 27, 0.932);
+  background-color: white;
+  color: rgba(231, 58, 27, 0.932);
+}
+.estaciones .fila:hover span {
+  display: none;
+}
+.estaciones .fila .dia {
+  background-image: url(../img/pexels-photo-1450391.jpeg);
+  background-size: cover;
+  background-position: bottom;
+  transition: 1s;
+  height: 500px;
+}
+.estaciones .fila .dia .escondida {
+  height: 500px;
+}
+.estaciones .fila .dia .una {
+  position: relative;
+  left: -700px;
+  display: none;
+  opacity: 0;
+}
+.estaciones .fila .dia:hover .escondida.una {
+  left: 0;
+  display: flex;
+  opacity: 1;
+}
+.estaciones .fila .noche {
+  background-image: url(../img/pexels-photo-5232494.jpeg);
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+.estaciones .fila .noche .escondida {
+  height: 500px;
+}
+.estaciones .fila .noche .dos {
+  position: relative;
+  right: -700px;
+  display: none;
+}
+.estaciones .fila .noche:hover .escondida.dos {
+  right: 0;
+  display: flex;
+}
+.estaciones .fila .dia.unos {
+  background-image: url(../img/pexels-photo-1450372.jpeg);
+  background-size: cover;
+  background-position: bottom;
+  height: 500px;
+}
+.estaciones .fila .noche.uno {
+  background-image: url(../img/pexels-photo-3434518.jpeg);
+  background-size: cover;
+  background-position: bottom;
+  height: 500px;
+}
+
+@media (max-width: 450px) {
+  .hoteles.tres .verde {
+    flex-direction: column;
+  }
+}
+.hoteles.tres h4 {
+  text-transform: uppercase;
+}
+.hoteles.tres .hotel.diez {
+  background-image: url(../img/pexels-photo-2404370.jpeg);
+  background-size: cover;
+  background-position: bottom;
+}
+.hoteles.tres .hotel.once {
+  background-image: url(../img/pexels-photo-1645028.jpeg);
+  background-size: cover;
+  background-position: bottom;
+}
+.hoteles.tres .hoteldos.doce {
+  background-image: url(../img/pexels-photo-9765729.jpeg);
+  background-size: cover;
+  background-position: center;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.hoteles.dos {
+  margin-top: 150px;
+  margin-bottom: 250px;
+}
+@media (max-width: 450px) {
+  .hoteles.dos .azul {
+    flex-direction: column;
+  }
+}
+.hoteles.dos h4 {
+  text-transform: uppercase;
+}
+@media (max-width: 450px) {
+  .hoteles.dos .media {
+    flex-direction: column;
+  }
+}
+.hoteles.dos .hotel.cuatro {
+  background-image: url(../img/pexels-photo-164595.jpeg);
+  background-size: cover;
+  background-position: bottom;
+}
+.hoteles.dos .hotel.cinco {
+  background-image: url(../img/pexels-photo-189296.jpeg);
+  background-size: cover;
+  background-position: bottom;
+}
+.hoteles.dos .hotel.seis {
+  background-image: url(../img/pexels-photo-279746.jpeg);
+  background-size: cover;
+  background-position: bottom;
+}
+.hoteles.dos .hotel.siete {
+  background-image: url(../img/pexels-photo-338504.jpeg);
+  background-size: cover;
+  background-position: bottom;
+}
+.hoteles.dos .box:hover {
+  color: black;
+}
+
+/*Flex*/
+.flex {
+  display: flex;
+}
+
+.jend {
+  justify-content: flex-end;
+}
+
+.acenter {
+  align-items: center;
+}
+
+.saround {
+  justify-content: space-around;
+}
+
+.jcenter {
+  justify-content: center;
+}
+
+.fcolumn {
+  flex-direction: column;
+}
+
+.fend {
+  align-items: flex-end;
+}
+
+.sbetween {
+  justify-content: space-between;
+}
+
+.aend {
+  align-items: flex-end;
+}/*# sourceMappingURL=style.css.map */
